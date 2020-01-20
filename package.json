@@ -1,0 +1,35 @@
+{
+  "name": "nextjs",
+  "version": "3.0.0",
+  "private": true,
+  "dependencies": {
+    "@babel/plugin-proposal-export-default-from": "^7.2.0",
+    "@material-ui/core": "^3.9.2",
+    "@material-ui/icons": "^3.0.2",
+    "axios": "^0.18.0",
+    "font-awesome": "^4.7.0",
+    "jss": "latest",
+    "next": "latest",
+    "prop-types": "latest",
+    "react": "latest",
+    "react-custom-scrollbars": "^4.2.1",
+    "react-dom": "latest",
+    "react-fontawesome": "^1.6.1",
+    "react-jss": "^8.1.0",
+    "react-redux": "^6.0.0",
+    "react-swipeable-views": "^0.13.1",
+    "react-typing-effect": "^2.0.2",
+    "redux": "^4.0.1",
+    "redux-devtools-extension": "^2.13.8",
+    "redux-thunk": "^2.3.0"
+  },
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
+    "babel-plugin-transform-export-extensions": "^6.22.0"
+  }
+}
