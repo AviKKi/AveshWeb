@@ -19,7 +19,7 @@ const styles = theme => ({
     paddingBottom: theme.spacing.unit * 1,
     backgroundColor:"#424242",
     borderRadius:0,
-    width:'100%',
+    // width:'100%',
   },
    socialIcons: {
     width: "28px",

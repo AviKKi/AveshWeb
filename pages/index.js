@@ -11,6 +11,11 @@ import Team from '../components/Home/Team';
 import About from '../components/Home/About';
 import FabIntegrationSnackbar from './type'
 
+
+import MainImg from '../components/MainImg/MainImg';
+import Calender from '../components/Calendar/Calendar';
+import ReactFullpage from '@fullpage/react-fullpage';
+
 const styles = theme => ({
   root:
   	{
@@ -27,12 +32,15 @@ class App extends React.Component {
     const { classes } = this.props;
 
     return(
+          
             <Layout>
               <Head>
-                <link rel='stylesheet/css' src='/static/css/font.css' />
+                <link rel="stylesheet" href="static/css/styles.css" />
               </Head>
-              {/*<FabIntegrationSnackbar message="Registrations Starting Soon." />*/}
-              <TitleImg/>
+              <MainImg />
+              <Calender />
+              {/* <FabIntegrationSnackbar message="Registrations Starting Soon." /> */}
+              {/* <TitleImg/> */}
               <Events  />
               <Team />
               <About />

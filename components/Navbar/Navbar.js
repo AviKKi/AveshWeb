@@ -158,9 +158,11 @@ class SectionNavbars extends React.Component {
             <Header
               color="dark"
               leftLinks={
-               <Link href="/"><a><img src="../static/logo/AveshFont.png" className={classes.logo} / ></a></Link>
-                      }
-
+               <Link href="/">
+                 <a><img src="../static/img/2020/logo2.png" className={classes.logo} /></a>
+                </Link>
+                    }
+              style={{height: '100%', width: 'auto'}}
               rightLinks={
                 <StyledRightLinks clickHandler={clickHandler} />
               }
