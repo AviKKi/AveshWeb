@@ -2,28 +2,18 @@ import React, { Component } from 'react';
 import { withStyles } from '@material-ui/core';
 
 const styles = theme => ({
-    clock:{
-        width: '80px',
-        height: '80px',
-        display: 'flex',
-        borderRadius: '50%',
-        border: '2px solid red',
-        justifyContent: 'center',
-        alignItems: 'center',
-        flexWrap: 'wrap',
-        margin: '10px',
-        flexDirection: 'column'
-    },
     timer:{
         display:'flex',
         margin: 'auto'
     },
     text:{
         fontSize: '0.8rem',
-        display: 'block'
+        display: 'block',
+        color:'white'
     },
     tick:{
         fontSize:'2.5rem',
+        color:'white'
     }
 })
 
@@ -53,7 +43,7 @@ class Clock extends Component{
 
     getTimeUntil(deadline){
         const time = Date.parse(deadline) - Date.parse(new Date());
-        console.log('time',time);
+        // console.log('time',time);
         const seconds = Math.floor((time/1000) % 60);
         const minutes = Math.floor((time/1000/60) % 60);
         const hours = Math.floor(time/(1000*60*60) % 24);
@@ -68,22 +58,54 @@ class Clock extends Component{
         // this.getTimeUntil(this.props.deadline);
         return(
         <div className={classes.timer}>
-            <div className={classes.clock}>
+            <div className="clock">
                 <div className={classes.tick}>{this.leading0(this.state.days)}</div>
                 <div className={classes.text}>days</div>
             </div>
-            <div className={classes.clock}>
+            <div className="clock">
                 <div className={classes.tick}>{this.leading0(this.state.hours)}</div>
                 <div className={classes.text}>hours</div>
             </div>
-            <div className={classes.clock}>
+            <div className="clock">
                 <div className={classes.tick}>{this.leading0(this.state.minutes)}</div> 
                 <div className={classes.text}>minutes</div>
             </div>
-            <div className={classes.clock}>
+            <div className="clock">
                 <div className={classes.tick}>{this.leading0(this.state.seconds)}</div>
                 <div className={classes.text}>sec</div>
             </div>
+            <style jsx>{`
+            
+            .clock{
+                width: 75px;
+                height: 75px;
+                display: flex;
+                border-radius: 50%;
+                border: 2px solid #d40404;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                margin: 10px;
+                flex-direction: column;
+                background-color:rgba(0,0,0,0.3);
+                animation:glow 1.25s ease-in infinite;
+            }
+            @keyframes glow{
+                0%{
+                    box-shadow:0px 0px -10px gold;
+                }
+                40%{
+                    box-shadow:0px 0px 20px gold;
+                }
+                60%{
+                    box-shadow:0px 0px 20px gold;
+                }
+                100%{
+                    box-shadow:0px 0px -10px gold;
+                }
+            }
+            
+            `}</style>
         </div>
         )
     }

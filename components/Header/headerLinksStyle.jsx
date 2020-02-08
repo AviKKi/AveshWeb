@@ -40,8 +40,8 @@ const headerLinksStyle = theme => ({
   {
   position:'static',
   zIndex:200,
-  height:60,
-  width:60,
+  height:100,
+  width:100,
   marginLeft:50,
   [theme.breakpoints.down("sm")]: {
       marginLeft:10,

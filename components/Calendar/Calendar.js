@@ -9,11 +9,13 @@ const styles = theme => ({
         // backgroundSize: 'cover',
         // height: '754px',
 
-        // display: 'flex',
-        // flexDirection: 'column',
+        display: 'flex',
+        flexDirection: 'column',
         alignItems: 'right',
         justifyContent: 'right',
-        // alignContent: 'right',
+        alignContent: 'right',
+        backgroundColor: 'rgba(0,0,0,0.2)',
+        height: '100%'
         // textAlign: 'center'
     },
     // calender:{
@@ -28,8 +30,17 @@ const styles = theme => ({
         justifyContent: 'center',
         alignContent: 'space-between',
         textAlign: 'center',
-        marginLeft:'50%'
-    }
+        marginLeft:'50%',
+        [theme.breakpoints.down('md')]:{
+            width: '80%',
+            marginLeft: '20%'
+        },
+        [theme.breakpoints.down('md')]:{
+            width: '100%',
+            marginLeft: '0%'
+        },
+
+    },
 });
 
 class Calender extends React.Component{
@@ -43,6 +54,7 @@ class Calender extends React.Component{
     const {classes} = this.props;
         return (
             <div className={classes.root}>
+                <h1 style={{ textShadow:'2px 8px 2px black',letterSpacing:'0.2em',textAlign: 'center', fontFamily: 'Harry', fontSize: '4em', color:'#FFF'}}>Mark The Dates</h1>
               <div className={classes.root_inside}>
                 <div className={classes.calender}>
                     <img src="static/img/2020/cal.png" style={{width:"60%", height:"auto" , }}/>

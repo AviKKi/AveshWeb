@@ -15,6 +15,8 @@ import Navbar from '../components/Navbar/Navbar';
 import MainImg from '../components/MainImg/MainImg';
 import Calender from '../components/Calendar/Calendar';
 import ReactFullpage from '@fullpage/react-fullpage';
+import Footer from '../components/Footer/Footer';
+import Faq from '../components/Faq/Faq';
 
 const styles = theme => ({
   root:
@@ -28,7 +30,7 @@ const styles = theme => ({
 
   const styles1 = {
     backgroundImage:'url(http://getwallpapers.com/wallpaper/full/b/0/6/263616.jpg)',
-    backgroundSize:'cover'
+    backgroundSize:'cover',
   };
   const styles2 = {
     backgroundImage:'url(https://images.unsplash.com/photo-1547756536-cde3673fa2e5)',
@@ -37,7 +39,12 @@ const styles = theme => ({
   const styles3 = {
     backgroundImage:'url(https://images.unsplash.com/photo-1551269901-5c5e14c25df7)',
     backgroundSize:'cover',
-    opacity:'0.5'
+    // opacity:'0.5'
+  };
+  const styles4 = {
+    backgroundImage:'url(http://getwallpapers.com/wallpaper/full/9/7/7/263576.jpg)',
+    backgroundSize:'cover',
+    // opacity:'0.5'
   };
   
 
@@ -55,8 +62,8 @@ class App extends React.Component {
         </Head>
         <ReactFullpage
           //fullpage options
-          scrollingSpeed = {1000}
-          navigation={true}
+          scrollingSpeed = {750}
+          navigation={false}
           autoScrolling={true}
           controlArrows= {false}
           slidesNavigation={true}
@@ -74,6 +81,13 @@ class App extends React.Component {
                 </div>
                 <div className="section" style={styles3}>
                   <Events/>
+                </div>
+                <div className="section" style={styles4}>
+                  <Faq/>
+                </div>
+                <div className="section">
+                  <About />
+                  <Footer />
                 </div>
               </ReactFullpage.Wrapper>
             );
@@ -99,4 +113,4 @@ class App extends React.Component {
 <About />
 </Layout> */}
 
-export default withStyles(styles)(App)
+export default withStyles(styles)(App);

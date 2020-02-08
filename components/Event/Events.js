@@ -13,6 +13,7 @@ const styles = theme => ({
     marginBottom: theme.spacing.unit * 4,
     // backgroundImage: 'url(https://images.unsplash.com/photo-1551269901-5c5e14c25df7)',
     // backgroundSize: 'cover'
+    // backgroundColor: 'rgba(0,0,0)'
   },
   images: {
     marginTop: theme.spacing.unit * 8,
@@ -123,8 +124,8 @@ function ProductCategories(props) {
   return (
   <div id="Events">
     <LayoutBody className={classes.root} component="section" width="large">
-      <Typography variant="h4" marked="center" align="center" component="h2" style={{fontFamily: 'cursive'}}>
-        For all Events
+      <Typography variant="h4" marked="center" align="center" component="h2" style={{fontFamily: 'Harry', color:"#FFF"}}>
+        Events
       </Typography>
       
       <div className={classes.images}>

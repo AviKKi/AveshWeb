@@ -26,18 +26,17 @@ function About(props) {
 
   return (
     <LayoutBody className={classes.root} component="section" width="large">
-      <Typography variant="h4" marked="center" align="center" style={{fontFamily: 'cursive'}}>
+      <Typography variant="h4" marked="center" align="center" style={{fontFamily: 'Harry'}}>
         About Us
       </Typography>
 
       <Typography variant="body2" marked="center" align="center" className={classes.about}>
 
-      AVESH3.0 a Techno-management Event of Government Engineering College, Raipur. This event provides a platform to all the engineers of various branches to face a competitive environment of technical as well as management.
+      AVESH Chapter-4 is a Techno-management Event of Government Engineering College, Raipur. This event provides a platform to all the engineers of various branches to face a competitive environment of technical as well as management.
 
-      <br />We in our institution consider education to be divine gift of God and endevour to provide the quality education clubbed with real-time implementations, AVESH3.0 is the doorstep.
+      <br />We, in our institution consider education to be divine gift of God and endevour to provide the quality education clubbed with real-time implementations, AVESH3.0 is the doorstep.
 
       </Typography>
-
 
     </LayoutBody>
   );
