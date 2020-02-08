@@ -11,6 +11,8 @@ const styles = theme => ({
   root: {
     marginTop: theme.spacing.unit * 8,
     marginBottom: theme.spacing.unit * 4,
+    // backgroundImage: 'url(https://images.unsplash.com/photo-1551269901-5c5e14c25df7)',
+    // backgroundSize: 'cover'
   },
   images: {
     marginTop: theme.spacing.unit * 8,

@@ -3,14 +3,13 @@ import { withStyles } from '@material-ui/core';
 
 const styles = theme => ({
     root:{
-        backgroundImage: 'url(http://getwallpapers.com/wallpaper/full/b/0/6/263616.jpg)',
-        backgroundSize: 'cover',
-        width: '100%',
-        height: '780px',
+        // backgroundImage: 'url(http://getwallpapers.com/wallpaper/full/b/0/6/263616.jpg)',
+        // backgroundSize: 'cover',
+        // width: '100%',
         color: '#FFF',
         textAlign: 'center',
         fontFamily: 'Harry',
-        paddingTop: '340px'
+        // paddingTop: '340px'
         // marginTop: '200px'
     }
 })

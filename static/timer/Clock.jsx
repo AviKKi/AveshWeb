@@ -1,7 +1,34 @@
 import React, { Component } from 'react';
-// import './App.css'
+import { withStyles } from '@material-ui/core';
+
+const styles = theme => ({
+    clock:{
+        width: '80px',
+        height: '80px',
+        display: 'flex',
+        borderRadius: '50%',
+        border: '2px solid red',
+        justifyContent: 'center',
+        alignItems: 'center',
+        flexWrap: 'wrap',
+        margin: '10px',
+        flexDirection: 'column'
+    },
+    timer:{
+        display:'flex',
+        margin: 'auto'
+    },
+    text:{
+        fontSize: '0.8rem',
+        display: 'block'
+    },
+    tick:{
+        fontSize:'2.5rem',
+    }
+})
 
 class Clock extends Component{
+    
     constructor(props){
         super(props);
         this.state = {
@@ -10,7 +37,7 @@ class Clock extends Component{
             minutes: 0,
             seconds: 0
         }
-    }
+    } 
 
     componentWillMount(){
         this.getTimeUntil(this.props.deadline);
@@ -32,21 +59,34 @@ class Clock extends Component{
         const hours = Math.floor(time/(1000*60*60) % 24);
         const days = Math.floor(time/(1000*60*60*24));
 
-        console.log('seconds',seconds,'minutes',minutes,'hours',hours,'days',days);
+        // console.log('seconds',seconds,'minutes',minutes,'hours',hours,'days',days);
         this.setState({days, hours, minutes, seconds});
     }
 
     render(){
+        const {classes} = this.props;
         // this.getTimeUntil(this.props.deadline);
         return(
-        <div>
-            <div className="Clock-days">{this.leading0(this.state.days)} days</div>
-            <div className="Clock-hours">{this.leading0(this.state.hours)} hours</div>
-            <div className="Clock-minutes">{this.leading0(this.state.minutes)} minutes</div>
-            <div className="Clock-seconds">{this.leading0(this.state.seconds)} sec</div>
+        <div className={classes.timer}>
+            <div className={classes.clock}>
+                <div className={classes.tick}>{this.leading0(this.state.days)}</div>
+                <div className={classes.text}>days</div>
+            </div>
+            <div className={classes.clock}>
+                <div className={classes.tick}>{this.leading0(this.state.hours)}</div>
+                <div className={classes.text}>hours</div>
+            </div>
+            <div className={classes.clock}>
+                <div className={classes.tick}>{this.leading0(this.state.minutes)}</div> 
+                <div className={classes.text}>minutes</div>
+            </div>
+            <div className={classes.clock}>
+                <div className={classes.tick}>{this.leading0(this.state.seconds)}</div>
+                <div className={classes.text}>sec</div>
+            </div>
         </div>
         )
     }
 }
 
-export default Clock;
+export default (withStyles)(styles)(Clock);
