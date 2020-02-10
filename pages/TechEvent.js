@@ -36,7 +36,7 @@ class SectionPills extends React.Component {
     })
     return (
       <Layout>
-        <div className={classes.section} style={{ width: '100%', marginVerticle: "30px" }}>
+        <div className={classes.section} style={{ marginTop:'124px',width: '100%', marginVerticle: "30px" }}>
           <div className={classes.container} >
             <Newspaper.Wrapper style={styles.wrapper}>
               {/* <Newspaper.TopHr /> */}

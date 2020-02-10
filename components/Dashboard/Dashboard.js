@@ -27,7 +27,7 @@ class SectionPills extends React.Component {
                     contentGrid: { xs: 12, sm: 9, md: 10 }
                   }
     return (
-      <div className={classes.section}>
+      <div className={classes.section} style={{marginTop:"124px"}}>
         <div className={classes.container}>
         {profile!==undefined?(<div style={{overflow:"hidden"}} id="navigation-pills">
             <GridContainer>
