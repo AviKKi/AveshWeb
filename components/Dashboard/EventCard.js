@@ -8,6 +8,7 @@ import Button from '@material-ui/core/Button'
 const styles = theme => ({
   root: {
     ...theme.mixins.gutters(),
+    width: "250px",
     paddingTop: theme.spacing.unit * 2,
     paddingBottom: theme.spacing.unit * 2,
   },
@@ -17,13 +18,12 @@ function PaperSheet(props) {
   const { classes, name, description, id, participating, participateHandler, updatedNodes } = props
 
   return (
-    <div>
       <Paper className={classes.root} elevation={1}>
         <Typography variant="h5" component="h3">
           { name }
         </Typography>
         <Typography component="p">
-          { description }
+          {/* { description } */}
         </Typography>
         {participating ?
             (<Button
@@ -35,7 +35,6 @@ function PaperSheet(props) {
                 color="secondary">Participate</Button>)
         }
       </Paper>
-    </div>
   )
 }
 
