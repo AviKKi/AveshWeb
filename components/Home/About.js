@@ -10,6 +10,12 @@ const styles = theme => ({
   	{
     marginTop: theme.spacing.unit * 3,
     marginBottom: theme.spacing.unit * 4,
+    backgroundColor:'rgba(0,0,0,0.4)',
+    position: 'absolute',
+    top: '10px',
+    left: '10%',
+    width: '80%',
+    margin: 'auto'
 	},
   about : {
     fontfamily : "cursive",
@@ -17,7 +23,7 @@ const styles = theme => ({
     justify : "center",
     paddingTop : theme.spacing.unit * 5,
     paddingBottom : theme.spacing.unit * 5,
-    color : "#424242",
+    color : "#FFF",
   },
  });
 
@@ -26,18 +32,17 @@ function About(props) {
 
   return (
     <LayoutBody className={classes.root} component="section" width="large">
-      <Typography variant="h4" marked="center" align="center" style={{fontFamily: 'cursive'}}>
+      <Typography variant="h4" marked="center" align="center" style={{ textShadow:'2px 8px 2px black',letterSpacing:'0.2em',textAlign: 'center', fontFamily: 'Harry', fontSize: '2em', color:'#FFF'}}>
         About Us
       </Typography>
 
-      <Typography variant="body2" marked="center" align="center" className={classes.about}>
+      <Typography variant="body2" marked="center" align="center" className={classes.about} style={{padding: '0px'}}>
 
-      AVESH3.0 a Techno-management Event of Government Engineering College, Raipur. This event provides a platform to all the engineers of various branches to face a competitive environment of technical as well as management.
+      AVESH Chapter-4 is a Techno-management Event of Government Engineering College, Raipur. This event provides a platform to all the engineers of various branches to face a competitive environment of technical as well as management.
 
-      <br />We in our institution consider education to be divine gift of God and endevour to provide the quality education clubbed with real-time implementations, AVESH3.0 is the doorstep.
+      {/* <br />We, in our institution consider education to be divine gift of God and endevour to provide the quality education clubbed with real-time implementations, AVESH3.0 is the doorstep. */}
 
       </Typography>
-
 
     </LayoutBody>
   );

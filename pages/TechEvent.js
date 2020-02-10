@@ -15,7 +15,9 @@ import NavPills from "../components/NavPills/NavPills";
 import pillsStyle from "../components/NavPills/pillsStyle.jsx";
 import SubEvent from "../components/Event/SubEvent";
 
-import Layout from "../components/Layout/Layout"
+import Layout from "../components/Layout/Layout";
+import Navbar from "../components/Navbar/Navbar";
+import Footer from "../components/Footer/Footer";
 //import Events from "../data/Events"
 import { Technical } from "../data/Events"
 
@@ -34,8 +36,8 @@ class SectionPills extends React.Component {
         )
       }
     } )
-    return (
-      <Layout>
+    return (<>
+      <Navbar st='static' />
       <div className={classes.section} style={{width:'100%'}}>
         <div className={classes.container}>
                 <NavPills
@@ -44,7 +46,7 @@ class SectionPills extends React.Component {
                 />
         </div>
       </div>
-      </Layout>
+      <Footer /></>
     );
   }
 }

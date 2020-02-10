@@ -40,11 +40,13 @@ const headerLinksStyle = theme => ({
   {
   position:'static',
   zIndex:200,
-  height:50,
-  width:180,
+  height:100,
+  width:100,
   marginLeft:50,
   [theme.breakpoints.down("sm")]: {
       marginLeft:10,
+      width: 75,
+      height: 75
     },
   },
   navLink: {

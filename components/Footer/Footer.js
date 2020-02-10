@@ -13,13 +13,14 @@ import Favorite from "@material-ui/icons/Favorite";
 
 const styles = theme => ({
   root: {
+    opacity: '0.9',
     ...theme.mixins.gutters(),
     marginTop: theme.spacing.unit * 0,
-    paddingTop: theme.spacing.unit * 5,
+    paddingTop: theme.spacing.unit * 1,
     paddingBottom: theme.spacing.unit * 1,
-    backgroundColor:"#424242",
+    backgroundColor:"rgba(66,66,66)",
     borderRadius:0,
-    width:'100%',
+    // width:'100%',
   },
    socialIcons: {
     width: "28px",
@@ -38,14 +39,19 @@ const styles = theme => ({
     borderRadius:0,
     paddingBottom: theme.spacing.unit * 0.5,
   },
+  footer:{
+    position: "absolute",
+    bottom: '0',
+    width: "100%",
+  }
 });
 
 function PaperSheet(props) {
   const { classes } = props;
 
   return (
-    <div id="footer">
-
+    <div id="footer" className={classes.footer} style={{position:props.st}}>
+      <h2 style={{ textShadow:'2px 8px 2px black',letterSpacing:'0.1em',textAlign: 'center', fontFamily: 'Harry', fontSize: '4em', color:'#FFF', marginBottom: '15%'}}>Contact Us</h2>
       <Paper className={classes.root} elevation={1}>
       <Grid container
       spacing={0}
@@ -53,47 +59,51 @@ function PaperSheet(props) {
       justify="center"
       alignItems="center"
       >
-      <Grid item xs={2} lg={2}>
+      <Grid item xs={5} lg={3}>
         <Typography variant="button" gutterBottom align="center" style={{color:"#f1f8e9",fontSize:14}}>
-         <b> Follow us on </b>
+         <strong> Follow us on </strong>
          <br/>
                   <a href="https://www.facebook.com/aveshngecr"><img src="../static/img/fb.png" className={classes.socialIcons}/></a>
-                  <a href="https://www.instagram.com/aveshgec/"><img src="../static/img/insta.png"  className={classes.socialIcons}/></a>
+                  <a href="https://www.instagram.com/aveshgecr/"><img src="../static/img/insta.png"  className={classes.socialIcons}/></a>
                 {/*  <img src="../static/img/google.png"  className={classes.socialIcons}/>
                   <img src="../static/img/yt.png"  className={classes.socialIcons}/>
                   <img src="../static/img/marker.png"  className={classes.socialIcons}/>
               */}
         </Typography>
         </Grid>
-<hr style={{width:"100px"}}/>
-        <Grid item xs={2} lg={2}>
-        <Typography variant="button" gutterBottom align="center" style={{color:"#f1f8e9",paddingTop:"30px",fontSize:14,marginTop:"0px"}}>
+        <hr style={{width:"200px"}}/>
+        <Grid item xs={10} lg={4}>
+        <Typography variant="button" gutterBottom align="center" style={{color:"#f1f8e9",paddingTop:"30px",fontSize:14,marginTop:"0px", padding:'0px'}}>
          <b> Contact us on </b>
          </Typography>
                    <Typography variant="body2" gutterBottom align="center" style={{color:"#f1f8e9",fontSize:14}}>
-                    Aniket Agrawal : 8962721184 <br/> Website Admin : 7247489270
+                      Rishabh Singh : 8517817641 <br />
+                      Devesh Joshi : 7974451799 <br />
+                      Satyam Lachhwani : 9770977224<br />
+                      Akarshit Shrivastav : 9131054396  <br/><br/> 
+                      Website Admin : 7247489270
                     </Typography>
-                  {/*  <img src="../static/img/google.png"  className={classes.socialIcons}/>
+                   {/* <img src="../static/img/google.png"  className={classes.socialIcons}/>
                     <img src="../static/img/yt.png"  className={classes.socialIcons}/>
                     <img src="../static/img/marker.png"  className={classes.socialIcons}/>
                 */}
           </Grid>
         </Grid>
-         <br/>
+         {/* <br/> */}
          <hr style={{width:"100px"}}/>
 
                  <Typography variant="subtitle2" gutterBottom align="center" style={{paddingTop:"30px",color:"#f1f8e9",fontSize:14}}>
 
-                            Govt. Engineering College, Sejbhar, Raipur (C.G.)
+                            Government Engineering College, Sejbahar, Raipur (C.G.)
                             <br/>
-                            Email : avesh@gecraipur.ac.in
+                            Email : aveshaayam2k20@gmail.com
 
                 </Typography>
 
       </Paper>
       <Paper className={classes.craft}>
         <Typography variant="subtitle2" gutterBottom align="center" style={{color:"#f1f8e9",fontSize:14}}>
-        <b>CRAFTED WITH <Favorite style={{color:"#f00",position:'relative',paddingTop: 8}}/> BY AVESH WEB TEAM 2019 </b>
+        <b>CRAFTED WITH <span style={{position:'relative', top:'8px'}}><Favorite style={{color:"#f00",position:'relative',paddingTop: 0,}}/></span> BY AVESH WEB TEAM 2020 </b>
         </Typography>
       </Paper>
     </div>

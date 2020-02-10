@@ -13,59 +13,97 @@ import GridItem from '../components/Grid/GridItem';
 import LayoutBody from '../components/Layout/LayoutBody';
 import Layout from '../components/Layout/Layout';
 import Typography from '../components/Typography/Typography';
+import Navbar from '../components/Navbar/Navbar';
+import Footer from '../components/Footer/Footer';
+import Team from '../components/Home/Team';
+import Link from 'next/link';
+import Head from 'next/head';
 
 const styles = theme => ({
+
   root:
   	{
     marginTop: theme.spacing.unit * 0,
     marginBottom: theme.spacing.unit * 0,
+    // backgroundColor:'rgba(0,0,0,0.2)',
+    borderRadius:8,
 	},
   container : {
-    padding : "5vh"
+    padding : "5vh",
+    [theme.breakpoints.down('sm')]:{
+      padding: '4vh 1vh'
+    }
   },
   card: {
     marginTop:"2.5vh",
     padding: theme.spacing.unit * 2,
     width : 216,
     [theme.breakpoints.down("sm")]: {
-      width:214,
+      width:'90%',
     },
     height: "100%",
     borderRadius:3,
   },
   media: {
     width : 182,
-    height: 180,
+    height: 0,
     borderRadius:'50%',
   },
+  head: {
+    marginTop:100,
+    fontFamily:'Harry',
+    color:'white',
+    fontSize:'3em',
+    [theme.breakpoints.down('sm')]:{
+      fontSize:'2em',
+    }
+  }
  });
 
  const teams = [
-    /*{
-      title : 'Management',
+    {
+      title : 'Fest-Management',
       detail : [
       {
-        name : "Akanchha Sahu",
-        pic : "../static/team/akanchha.jpg"
+        name : "Satyam Lachhwani",
+        profile : "www.google.com",
+        // pic : "../static/team/.jpg"
+      },
+      {
+        name : "Naama Ali",
+        profile : "www.unsplash.com",
+        // pic : "../static/team/.jpg"
+      },
+      {
+        name : "Anmol Matharu",
+        profile : "",
+        // pic : "../static/team/.jpg"
       },
       ]
-  },*/
+  },
 
     {
       title : 'Website',
       detail : [
       {
         name : "Atul Yadav(AviKKi)",
-        pic : "../static/team/github.png"
+        profile : "",
+        // pic : "../static/team/github.png"
       },
       {
         name : "Diksha Verma",
-        pic : "../static/team/diksha.jpg"
+        profile : "",
+        // pic : "../static/team/diksha.jpg"
       },
       {
-        name : "Gilbeesh Kosma",
-        pic : "../static/team/github2.png"
+        name : "Chandra Shekhar Sahu",
+        profile : "",
+        // pic : "../static/team/github2.png"
       },
+      {
+        name : "Arun Kumar Behra",
+        profile : "",
+      }
       ]
     },
 
@@ -74,29 +112,64 @@ const styles = theme => ({
       detail : [
       {
         name : "Ashutosh Netam",
-        pic : "../static/team/ashu.jpeg"
+        profile : "",
+        // pic : "../static/team/ashu.jpeg"
       },
       {
-        name : "Bhavesh",
-        pic : "../static/team/bhavesh.jpg"
+        name : "Bhavesh Chandrakar",
+        profile : "",
+        // pic : "../static/team/bhavesh.jpg"
       },
       {
         name : "Nishita Toshi",
-        pic : "../static/team/nishita.jpg"
+        profile : "",
+        // pic : "../static/team/nishita.jpg"
+      },
+      ]
+    },
+    {
+      title : 'Support',
+      detail : [
+      {
+        name : "Palash Dubey",
+        profile : "",
+        // pic : "../static/team/ashu.jpeg"
+      },
+      {
+        name : "Alka Tiwari",
+        profile : "",
+        // pic : "../static/team/bhavesh.jpg"
+      },
+      {
+        name : "Muskaan Agrawal",
+        profile : "",
+        // pic : "../static/team/nishita.jpg"
       },
       ]
     },
 
      {
-      title : 'Promotion',
+      title : 'Public Relation',
       detail : [
       {
-        name : "Ayushi Mourya",
-        pic : "../static/team/ayushi.jpg"
+        name : "Ditya Mukharjee",
+        profile : "",
+        // pic : "../static/team/ayushi.jpg"
       },
       {
-        name : "Salomi Toppo",
-        pic : "../static/team/salomi.jpg"
+        name : "Gaurav",
+        profile : "",
+        // pic : "../static/team/salomi.jpg"
+      },
+      {
+        name : "Pragya Mishra",
+        profile : "",
+        // pic : "../static/team/salomi.jpg"
+      },
+      {
+        name : "Ashish Kumar",
+        profile : "",
+        // pic : "../static/team/salomi.jpg"
       },
       ]
     },
@@ -107,11 +180,17 @@ function ProductCategories(props) {
 
   return (
     <>
-    <Layout>
+    <Head>
+          <link rel='stylesheet' src='../static/css/styles.css' />
+        </Head>
+    <div className='body'>
+      <Navbar st={'static'}/>
+      <Team />
+    {/* <Layout className={classes.body}> */}
      {teams.map(team => (
     <LayoutBody className={classes.root} component="section" width="large">
 
-      <Typography variant="h4" marked="center" align="center" component="h2" style={{marginTop:50,fontFamily: 'cursive'}}>
+      <Typography variant="h4" marked="center" align="center" component="h2" className={classes.head}>
         {team.title} Team
       </Typography>
 
@@ -127,14 +206,16 @@ function ProductCategories(props) {
       <GridItem xs={11} md={4} lg={4} align='center'>
           <Card className={classes.card}>
             <CardActionArea>
-              <CardMedia
+              {/* <CardMedia
                 className={classes.media}
                 image={t.pic}
-              />
+              /> */}
               <CardContent>
+                <Link href={t.profile}>
                 <Typography variant="button" component="h2" align="center" >
                   <b> <hr style={{width:'70%'}}/>{t.name}</b>
                 </Typography>
+                </Link>
               </CardContent>
             </CardActionArea>
             </Card>
@@ -143,10 +224,23 @@ function ProductCategories(props) {
 
       </GridContainer>
 
-
     </LayoutBody>
     ))}
-    </Layout>
+    {/* </Layout> */}
+    <Footer st="static"/>
+    <style jsx>{`
+      @font-face{
+        font-family: Harry;
+        src: url(../static/font/HARRYP__.TTF);
+      }
+     .body{
+        background:black;
+        background-color:rgba(0,0,0,0.8);
+        // background:url('../static/img/2020/2.jpg');
+        // background-size:cover;
+      }
+    `}</style>
+     </div>
      </>
   );
 }
