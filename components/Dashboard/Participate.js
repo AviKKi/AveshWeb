@@ -10,7 +10,6 @@ import {
 } from '../../actions/actionTypes'
 
 const DOMAIN = 'https://api.aveshgecr.in'
-// const DOMAIN = 'http://localhost:8080'
 
 class Participate extends React.Component {
     state = {
@@ -65,16 +64,23 @@ class Participate extends React.Component {
     render() {
         const { events } = this.state
         return (
-            <GridContainer spacing={1} style={{ overflow: 'hidden' }}>
-                {
-                    events.map(e =>
-                        <EventCard
-                            key={e.id}
-                            participateHandler={this.participateHandler.bind(this, e.id)}
-                            {...e} />
-                    )
-                }
-            </GridContainer>
+            <>
+                <h3 style={{ color: "white" }}>
+                    Let us know what events are you participating in.
+                </h3>
+
+                <GridContainer  justify="center" style={{ overflow: 'hidden' }}>
+                    {
+                        events.map(e =>
+                            <GridItem xs={10} sm={4}><EventCard
+                                key={e.id}
+                                participateHandler={this.participateHandler.bind(this, e.id)}
+                                {...e} />
+                            </GridItem>
+                        )
+                    }
+                </GridContainer>
+            </>
         )
     }
 }
