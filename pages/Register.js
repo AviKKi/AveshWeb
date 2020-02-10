@@ -120,8 +120,7 @@ class LoginPage extends React.Component {
       this.setState({ usernameSpinner: true })
       const res = await axios.get(DOMAIN + "/users/username_validator", { params: { username: this.state.username } })
       if (res.data.found) {
-        this.setState({ usernameError: true })
-        this.setState({ snackbarState: true, snackbarMessage: "Username already taken." })
+        this.setState({ usernameError: true, snackbarState: true, snackbarMessage: "Username already taken." })
       }
       else {
         this.setState({ usernameError: false })
@@ -132,8 +131,7 @@ class LoginPage extends React.Component {
       this.setState({ emailSpinner: true })
       const res = await axios.get(DOMAIN + "/users/email_validator", { params: { email: this.state.email } })
       if (res.data.found) {
-        this.setState({ emailError: true })
-        this.setState({ snackbarState: true, snackbarMessage: "Email already used." })
+        this.setState({ emailError: true,snackbarState: true, snackbarMessage: "Email already used." })
       }
       else {
         this.setState({ emailError: false })
@@ -142,7 +140,6 @@ class LoginPage extends React.Component {
     }
   }
   handleSelect = (e) => {
-    console.log(e.target.value)
     this.setState({ college: e.target.value })
   }
 
@@ -203,7 +200,7 @@ class LoginPage extends React.Component {
                           fullWidth: true
                         }}
                         inputProps={{
-                          error:this.state.collegeError,
+                          error: this.state.collegeError,
                           onChange: this.handleSelect,
                           value: this.state.college,
                           type: "text",
