@@ -2,30 +2,26 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 
-import ButtonBase from '@material-ui/core/ButtonBase';
-import Button from '@material-ui/core/Button'
 import Fab from '@material-ui/core/Fab';
 
 import Close from '@material-ui/icons/Close'
 
-import LayoutBody from '../Layout/LayoutBody';
-import Typography from '../Typography/Typography';
 import ResponsiveDrawer from './customDrawer'
 import MainEvent from './MainEvent';
-
+import Newspaper from '../Newspaper';
 
 const images = [
-    {
-      url:
-        'https://images.unsplash.com/photo-1522542550221-31fd19575a2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
-      title: 'Front-End',
-    },
-    {
-      url:
-        'https://images.unsplash.com/photo-1484069560501-87d72b0c3669?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
-      title: 'CodeKnack',
-    },
-  ];
+  {
+    url:
+      'https://images.unsplash.com/photo-1522542550221-31fd19575a2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
+    title: 'Front-End',
+  },
+  {
+    url:
+      'https://images.unsplash.com/photo-1484069560501-87d72b0c3669?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
+    title: 'CodeKnack',
+  },
+];
 
 
 const styles = theme => ({
@@ -102,16 +98,23 @@ const styles = theme => ({
   },
 });
 
-function DetailsDrawer(props){
-  const {event} = props
+function DetailsDrawer(props) {
+  const { event } = props
   return (
     <ResponsiveDrawer transitionDuration={500} open={props.open}>
-      <div style={{padding:"10px", position:'absolute', zIndex:'200'}}>
-
-      <Fab size="small" color="secondary" onClick={props.closeHandler} style={{padding:0}}>
-        <Close style={{color:"#FFFFFF"}}/>
-      </Fab>
-
+      <div
+        style={{
+          padding: "10px",
+          position: 'absolute',
+          zIndex: '200'
+        }}>
+        <Fab
+          size="small"
+          color="secondary"
+          onClick={props.closeHandler}
+          style={{ padding: 0 }}>
+          <Close style={{ color: "#FFFFFF" }} />
+        </Fab>
       </div>
       {props.children}
       <MainEvent event={event} />
@@ -126,51 +129,31 @@ class Events extends React.Component {
     detailsOpen: false,
     drawerContent: {},
   }
-  toggleDetails = (e)=>{
+  toggleDetails = (e) => {
+    if (this.state.drawerOpen) {
+      this.setState({ detailsOpen: !this.state.detailsOpen })
+    } else {
+      this.setState({ detailsOpen: !this.state.detailsOpen, drawerContent: e })
+    }
 
-    this.setState({detailsOpen: !this.state.detailsOpen, drawerContent: e})
   }
-  render(){
-  const { classes, subEvents } = this.props;
-  //console.log(subEvents["mainEvents"])
-  return (
-    <>
-      <DetailsDrawer event={this.state.drawerContent} closeHandler={this.toggleDetails} open={this.state.detailsOpen} />
-      <div className={classes.images}>
-        {
-          subEvents["mainEvents"].map(e => (
-            <ButtonBase
-              onClick={this.toggleDetails.bind(this,e)}
-              key={e.title}
-              className={classes.imageWrapper}
-              style={{
-                width: 10,
-              }}
-            >
-              <div
-                className={classes.imageSrc}
-                style={{
-                  backgroundImage: `url(${e.background})`,
-                }}
-              />
-              <div className={classes.imageBackdrop} />
-              <div className={classes.imageButton}>
-                <Typography
-                  component="h3"
-                  variant="h6"
-                  color="inherit"
-                  className={classes.imageTitle}
-                >
-                  {e.title}
-                  <div className={classes.imageMarked} />
-                </Typography>
-              </div>
-            </ButtonBase>
-          ))}
+  render() {
+    const { classes, subEvents } = this.props;
+    return (
+      <>
+        <DetailsDrawer
+          event={this.state.drawerContent}
+          closeHandler={this.toggleDetails}
+          open={this.state.detailsOpen} />
+
+        <div className={classes.images}>
+          <Newspaper
+            onClick={this.toggleDetails}
+            articles={subEvents["mainEvents"]} />
         </div>
-    </>
-  );
-}
+      </>
+    );
+  }
 }
 
 Events.propTypes = {
