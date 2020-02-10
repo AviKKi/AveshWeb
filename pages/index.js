@@ -99,7 +99,7 @@ class App extends React.Component {
                 <div className="section" style={styles6}>
                   <Video />
                 </div>
-                <div className="section" style={styles4}>
+                <div className="section" style={styles4}  id="faq">
                   <Faq/>
                 </div>
                 <div className="section" style={styles5}>

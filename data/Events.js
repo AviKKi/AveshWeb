@@ -10,7 +10,7 @@ export const Technical =
 			mainEvents:[
 				{
 					title: "Consilio",
-					pdfLink: "https://drive.google.com/file/d/1gR9EZRXyogD81T3VuX7KaKS4KE3HBBDz/view?usp=sharing",
+					pdfLink: "",
 					description: "This event is all about creating attractive web pages and the name itself describes it . In today’s age, we use internet for everything and we go through web pages that are dynamic & responsive and you have to develop and design such web page in this contest. ",
 					coordinators: ["Satyam Lachhwani : +91-9770977224","Diksha Verma : +91-7224868077"],
 					logo: "../static/logo/Front-end-og.png",
@@ -18,11 +18,19 @@ export const Technical =
 				},
 				{
 					title: "CodeKnack",
-					pdfLink: "https://drive.google.com/file/d/18vWMUy6985Wvy7_eEW-W1AnunHb4nNEk/view?usp=sharing",
+					pdfLink: "https://drive.google.com/open?id=1c-C3xDQWIcw3QUNvHU73bGpLCyn4SUQO",
 					description: " “Ability is nothing without Opportunity”  This event will test your coding knack and Knowledge in most interesting and funny way. Surely challenges the coder within you. AVESH 2k19 invites all the coders to showcase their mastery in coding.",
 					coordinators: [" Akriti Ghosh : +91-9630060006","Poonam Sahu : +91-7770885739"],
 					logo: "../static/logo/Codeknack.png",
 					background: "../static/img/code.jpg"
+				},
+				{
+					title: "RoopRekha",
+					pdfLink: "https://drive.google.com/open?id=1cU8b4USjTjKXTprbIQNo4_yPDKeWUnP5",
+					description: "Rooprekha is for all the creative freaks, so be ready to showcase your creative mind in the field of graphic designing. We will give you the opportunity to communicate with people through your creative art along with many exciting prizes worth Rs. 2500.",
+					coordinators: ["Guru Sagar Yadav : +91-8120701375","Rahul Shrivastava : +91-7987946861"],
+					logo: "../static/logo/Roopreekha-OG.png",
+					background: "../static/img/rooprekha.jpg"
 				}]
 			},
 			{
@@ -30,7 +38,7 @@ export const Technical =
 				tabIcon: Dashboard,
 				mainEvents:[{
 					title: "Robo Drift",
-					pdfLink: "https://drive.google.com/file/d/1u5Y6K4lT0LR4Prn1LOj-PGG5e8ANQaS8/view?usp=sharing",
+					pdfLink: "https://drive.google.com/open?id=1xGlLq17ZwBCvLgFZMjeSxUWmqyT0bT6M",
 					description: "It is a robotics competition in which team has to make there robo on the track, consisting various hurdles and different track conditions. The teams have to clear the track in minimal time as possible to win the drift.",
 					coordinators: [" Ruchika Nuruty : +91-9827699522","Yogesh Kumar Chandrawanshi : +91-7694833236"],
 					logo: "../static/logo/robo-drift.png",
@@ -38,7 +46,7 @@ export const Technical =
 				},
 				{
 					title: "Robo Dangal",
-					pdfLink: "https://drive.google.com/file/d/1OEW_QcEUxFgtlh_k2AkTNf4cV_OTti6n/view?usp=sharing",
+					pdfLink: "https://drive.google.com/open?id=1UNjSk2kT9ARgGYvCHR5I_lLJVjcu4qCV",
 					description: "It is a robotic event, in which a bot has to push it's opponent bot out of the specified circle in arena to get points. Bot gaining highest points in allocated time is declared winner.",
 					coordinators: ["Irshad Ahmed : +91-8103796909","Jay Pipersania : +91-9340745677"],
 					logo: "../static/logo/dangal.png",
@@ -46,7 +54,7 @@ export const Technical =
 				},
 				{
 					title: "Robo Soccer",
-					pdfLink: "https://drive.google.com/file/d/1FH9l3adqya1BnbEnkQpiZpD8FMmv3Y-3/view?usp=sharing",
+					pdfLink: "https://drive.google.com/open?id=10hzo8ge1WzXPpyPQP_1mYC6qEd_x_Arn",
 					description: "It is a robotics event in which the opponents have to strike goal in their opponent goal post by dribbling the ball through their bots. The team which strikes the maximum goal wins the match. Soccer, To fight, run, tackle, defend, attack, score, and celebrate!",
 					coordinators: ["Ambati Laxman Rao : +91-9131892340","Vivek Verma : +91-9131995732"],
 					logo: "../static/logo/Soccer.png",
@@ -54,7 +62,7 @@ export const Technical =
 				},
 				{
 					title: "Maze Runner",
-					pdfLink: "https://drive.google.com/file/d/1E8kcCIajyKJLkuwewpECt9tDIdCApnlp/view?usp=sharing",
+					pdfLink: "https://drive.google.com/open?id=1ifXFvB5i5W33Pd7Msvu2MGvfS92KMuuS",
 					description: "Maze runner is an event where you need to use all of your mechanical skills, coding skills and problem solving skills altogether to design a bot which can overcome the obstacles on its way and find a way to the destination by its own using the smartness coded into it by its creaters.",
 					coordinators: ["Anand Biswas : +91-8770906466","Gourav Kashyap : +91-7999094448"],
 					logo: "../static/logo/maze.png",
@@ -62,51 +70,52 @@ export const Technical =
 				}]
 			},
 
-			{
-			tabButton: "Cad You Do it?",
-			tabIcon: Dashboard,
-			mainEvents:[
-				{
-					title: "Cad You Do it?",
-					pdfLink: "https://drive.google.com/file/d/1320IB4AsiTe1DE8BKcXKuFY4yRCBkPZZ/view?usp=sharing",
-					description: '"CAD You Do It?" is a creative stage for the technical performers to help them showcase their talents, for the design projects. So, its the time to sharpen your skills and show off your talent!' ,
-					coordinators: ["Nikhil Anand Singh : +91-7974421731","Vibhu Sharma : +91-9174466223"],
-					logo: "../static/logo/CAD-og.png",
-					background: "../static/img/cad.jpg"
-				},]
-			},
+			// {
+			// tabButton: "Cad You Do it?",
+			// tabIcon: Dashboard,
+			// mainEvents:[
+			// 	{
+			// 		title: "Cad You Do it?",
+			// 		pdfLink: "https://drive.google.com/file/d/1320IB4AsiTe1DE8BKcXKuFY4yRCBkPZZ/view?usp=sharing",
+			// 		description: '"CAD You Do It?" is a creative stage for the technical performers to help them showcase their talents, for the design projects. So, its the time to sharpen your skills and show off your talent!' ,
+			// 		coordinators: ["Nikhil Anand Singh : +91-7974421731","Vibhu Sharma : +91-9174466223"],
+			// 		logo: "../static/logo/CAD-og.png",
+			// 		background: "../static/img/cad.jpg"
+			// 	},]
+			// },
 			{
 			tabButton: "Pranoda",
 			tabIcon: Dashboard,
 			mainEvents:[
 				{
 					title: "Pranoda",
-					pdfLink: "https://drive.google.com/file/d/1tEWMRCGrCujhHsZ0aWnFZew-yKwW38GU/view?usp=sharing",
+					pdfLink: "https://drive.google.com/open?id=1xKIAxZgIh6f1OrZ00u4kXTTZZY9G9Vn0",
 					description: "In this event, Participants has to construct a rocket with a 2 ltrs. Soda bottle or less and show their skills in fluid dynamics, aeronautics, projectile motion. The performance of the rocket will be tested on the basis of its power and accuracy. Event will be organised in two stages one will test the range of the rocket and second will test the projectile accuracy. ",
 					coordinators: ["Rudra Pratap Rao : +91-8871274432","Ritesh Bhaiya : +91-8770955250"],
 					logo: "../static/logo/Pranoda-og.png",
 					background: "../static/img/pranoda.jpg"
 				},]
 			},
+			// {
+			// tabButton: "RoopRekha",
+			// tabIcon: Dashboard,
+			// mainEvents:[
+			// 	{
+			// 		title: "RoopRekha",
+			// 		pdfLink: "https://drive.google.com/open?id=1cU8b4USjTjKXTprbIQNo4_yPDKeWUnP5",
+			// 		description: "Rooprekha is for all the creative freaks, so be ready to showcase your creative mind in the field of graphic designing. We will give you the opportunity to communicate with people through your creative art along with many exciting prizes worth Rs. 2500.",
+			// 		coordinators: ["Guru Sagar Yadav : +91-8120701375","Rahul Shrivastava : +91-7987946861"],
+			// 		logo: "../static/logo/Roopreekha-OG.png",
+			// 		background: "../static/img/rooprekha.jpg"
+			// 	},]
+			// },
 			{
-			tabButton: "RoopRekha",
-			tabIcon: Dashboard,
-			mainEvents:[
-				{
-					title: "RoopRekha",
-					pdfLink: "https://drive.google.com/file/d/1R2jSat4egNg8d-ktiNglqEY2kukB7QBn/view?usp=sharing",
-					description: "Rooprekha is for all the creative freaks, so be ready to showcase your creative mind in the field of graphic designing. We will give you the opportunity to communicate with people through your creative art along with many exciting prizes worth Rs. 2500.",
-					coordinators: ["Guru Sagar Yadav : +91-8120701375","Rahul Shrivastava : +91-7987946861"],
-					logo: "../static/logo/Roopreekha-OG.png",
-					background: "../static/img/rooprekha.jpg"
-				},]
-			},{
 				tabButton: "Stratum",
 				tabIcon: Dashboard,
 				mainEvents:[
 				  {
 					title: "Setu",
-					pdfLink: "https://drive.google.com/file/d/1pxF1gO3Aznt7ph7izjjfUArExJdzkghh/view?usp=sharing",
+					pdfLink: "https://drive.google.com/open?id=1Fxhg3mCWY0r2eKnMpJrPPnrxvsIGzZjS",
 					description: "Walking on a bridge, this is highly likely for a civil engineer to wonder, about its construction, to get curious about its strength and design, to be eager to predict it's durability. In this event participants will have to build a truss bridge using the materials provided. Thinking at an elementary level grab this opportunity to make the structure that would stand firm on strong base of your structural Knowledge.",
 					coordinators: ["Supriya Kashyap : +91-8962525618 ","Chandrasheela Chauhan : +91-9174108282"],
 					logo: "../static/logo/setu.png",
@@ -114,7 +123,7 @@ export const Technical =
 				},
 				{
 					title: "RollerCoaster",
-					pdfLink: "https://drive.google.com/file/d/1qqld2Do1WvvSxi7YAIjl8azUrE-YMMCE/view?usp=sharing",
+					pdfLink: "https://drive.google.com/open?id=154eBzd0cLcqqoVPCcRgGZ1Q8IcuYdk-8",
 					description: "Roller coaster are thrill ridesthat operate like a railboard track. They are made from steel and wood comprise a series of hills and drop, sudden turns, track loops and crock screw-like element. Team shall design and build a 'Roller coaster' meeting a requirement of below rules. The roller coaster mean the entire structure, including the roller coaster track and the base. ",
 					coordinators: ["Suhail Ansari : +91-8269370034","Shivani Tomar : +91-9340282692"],
 					logo: "../static/logo/Roller.png",
@@ -122,7 +131,7 @@ export const Technical =
 				},
 				{
 					title: "Claynum",
-					pdfLink: "https://drive.google.com/file/d/1Je4lq4MdmJRW87r9i6RqP1sl5g-j7NCU/view?usp=sharing",
+					pdfLink: "https://drive.google.com/open?id=1TzgfBoFcqZ5puK2S55kuL46beunANB0Z",
 					description: "Loved shaping sand into structures by a beach-side? CLAYNUM is the competitionto explore the horizon of your imagination, by conceptualizing, designing and eventually reaching to the finals for creating an outstanding model !!",
 					coordinators: ["Naama Ali : +91-8839349397"," Pankaj Verma : 8349046146"],
 					logo: "../static/logo/Claynum.png",
@@ -138,7 +147,7 @@ export const NonTechnical = [
 			mainEvents:[
 			  {
 				title: "PubG Mobile",
-				pdfLink: "https://drive.google.com/file/d/1ZwhhINrBQ4AEQ8g8q2H46uxugwrci58E/view?usp=sharing",
+				pdfLink: "https://drive.google.com/open?id=1jEcj6gjgG_9Kb44xsDTpwQsADU1yMLAq",
 				description: "PLAYERUNKNOWN’S BATTLEGROUND (PUBG) is an online multiplayer battle royale game which is developed/published by Tencent Games.You will need a internet connection to play that via mobile network or Wi-Fi but the lower the ping the better is the gameplay.Battleground is a player vs player shooter game in which upto one hundred players fight in a battle in a 8*8 km island(so called Erangel map),where players fight to remain the last alive and the last person or team left alive wins the match.",
 				coordinators: ["Shivam Chaini : 7869147790","Aditya Bhatt : 8962871684"],
 				logo: "../static/logo/Pubg-Og.png",
@@ -146,7 +155,7 @@ export const NonTechnical = [
 			},
 			{
 				title: "Immersion",
-				pdfLink: "https://drive.google.com/file/d/1EC7cZT-5n-kNtkwqTevzz1FVJ2fEGL65/view?usp=sharing",
+				pdfLink: "https://drive.google.com/open?id=1BEDjARf2pwoK89hkn1AJzabQaixtuBVP",
 				description: "STEP INSIDE THE GAME. Come and discover new worlds and experiences while you dive into another reality, and feel it come to life. Lose track of your surroundings and get lost in the immersive world of pixels.",
 				coordinators: ["Gilbish Kosma : 6260511764"," Vishesh Jain : 8109015554 "],
 				logo: "../static/logo/Immersion-og.png",
@@ -154,7 +163,7 @@ export const NonTechnical = [
 			},
 			{
 				title: "CS:GO",
-				pdfLink: "https://drive.google.com/file/d/1APElMsO2aL8D6vvrR0qXHtTs8mWUfvol/view?usp=sharing",
+				pdfLink: "https://drive.google.com/open?id=1zppQUebSDRwBezlAj6AJ6AlKVOmFO31O",
 				description: "CS:GO is the latest iteration of the legendary CS series. A multiplayer first-person shooter video game, in which team of terrorists battle to perpetrate an act of terror (Bombing, Hostage taking) and team counter-terrorist try to prevent it. Sharpen your blades, switch off the safeties, lock 'n' load and get ready to scratch the itch in your trigger finger, because the only way to win is through teamwork and skillful play.",
 				coordinators: ["K K Suyash : +91-7974699389","Krishna Kumar Agrawal : +91-7470337341"],
 				logo: "../static/logo/CSGO-OG.png",
@@ -162,7 +171,7 @@ export const NonTechnical = [
 			},
 			{
 				title: "NFS MOST WANTED",
-				pdfLink: "https://drive.google.com/file/d/1iJ56uupqR1ZW4zGrW82ck5iiQd2H-CNl/view?usp=sharing",
+				pdfLink: "https://drive.google.com/open?id=1K0cYiRlJtDzmOgkcNlmrj65hl1Y8MIBD",
 				description: "NFS MOST WANTED is a racing and driving skills based game. The main aim is to compete with the opponents and reach the finish line.",
 				coordinators: ["Dheeraj Agrawal : +91-7000514424",""],
 				logo: "../static/logo/NFS-OG.png",
@@ -176,7 +185,7 @@ export const NonTechnical = [
 			mainEvents:[
 			  {
 				title: "Who Dunn it?",
-				pdfLink: "https://drive.google.com/file/d/1MjNIZ8Msmsbe7HqMcN92W0TIo4ZN9vQ1/view?usp=sharing",
+				pdfLink: "https://drive.google.com/open?id=1gLekF1g_iWoxebDo7D_p9SL6t4rhRMgF",
 				description: "If you think that you think enough to be a good detective then welcome to Who Dunn It?, which is a next level plot-driven variety of the detective story where you are given the opportunity to engage in the same process of the protagonist throughout the investigation of a crime. ",
 				coordinators: ["Sai Kiran : +91-8109126437","Shubham Patwar : +91-9340369078"],
 				logo: "../static/logo/You-dunn.png",
@@ -196,17 +205,17 @@ export const NonTechnical = [
 				logo: "",
 				background: "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/intermediary/f/0a2f2017-59f3-429d-991d-db3e478acca4/dbw0jqd-6c4b5bf2-4c80-4c14-81fa-d05b264118fe.jpg/v1/fill/w_1192,h_670,q_70,strp/pubg_by_dylanwe_dbw0jqd-pre.jpg"
 			},*/
-			{
-				title: "Jugaad",
-				pdfLink: "https://drive.google.com/file/d/17Uz7kSFYuUuLDQG-cihR4BSVai8CC83Y/view?usp=sharing",
-				description: "JUGAAD is an Indian phrase which describe how indians solve their problems in limited time period. This event is a platform which welcomes INNOVATION based on the theme. It demands creative mind that give birth to USEFUL stuff USELESS scrap!",
-				coordinators: ["Anshumala Jaiswal : +91-9111929393","Ayushi Mourya : +91-9109941008"],
-				logo: "../static/logo/Jugaad-og.png",
-				background: "../static/img/jugaad.png"
-			},
+			// {
+			// 	title: "Jugaad",
+			// 	pdfLink: "https://drive.google.com/file/d/17Uz7kSFYuUuLDQG-cihR4BSVai8CC83Y/view?usp=sharing",
+			// 	description: "JUGAAD is an Indian phrase which describe how indians solve their problems in limited time period. This event is a platform which welcomes INNOVATION based on the theme. It demands creative mind that give birth to USEFUL stuff USELESS scrap!",
+			// 	coordinators: ["Anshumala Jaiswal : +91-9111929393","Ayushi Mourya : +91-9109941008"],
+			// 	logo: "../static/logo/Jugaad-og.png",
+			// 	background: "../static/img/jugaad.png"
+			// },
 			{
 				title: "Pariksh",
-				pdfLink: "https://drive.google.com/file/d/1SCFi50gox8lNVC8-n4M9RBZ1CVv1nzCi/view?usp=sharing",
+				pdfLink: "https://drive.google.com/open?id=1R9o08jhWnxbeQjhIXGdgpdvu29IvQulR",
 				description: "It's a Quiz competition. The event contain questions regarding technical, management and a little general knowledge & current issues.",
 				coordinators: ["Muskaan Agrawal : +91-7470359960","Ankit Gupta : +91-9589200527"],
 				logo: "../static/logo/Pariksh-og.png",
@@ -223,20 +232,20 @@ export const Managment = [
 			mainEvents:[
 			  {
 				title: "Corporate Roadies",
-				pdfLink: "https://drive.google.com/file/d/1J5KpmKFmmHsYkpGzhnOwrHXWh-g4h-Zc/view?usp=sharing",
+				pdfLink: "",
 				description: "Corporate Roadies is a collection of management trails to test your business acumen, skills, and Knowledge. The game is designed to throw the worst at you to bring out best in you. The participants need to show their caliber, the power of persuasion and the ability to handle pressure. Preparing the participants to withstand the harsh reality of the corporate world.",
 				coordinators: ["Ambuj Yadav : +91-9131475865","Soniya Sharma : +91-6260401640"],
 				logo: "../static/logo/cr.png",
 				background: "../static/img/cr.jpg"
 			},
-			{
-				title: "Virtual Trading",
-				pdfLink: "https://drive.google.com/file/d/1oGghXZ-n2Skzu-leCBQQZe3pd2r3bW-M/view?usp=sharing",
-				description: "Virtual Trading : A Digital Share Market.Virtual trading, A method of simulated trading where beginner traders can practice investing without using real money. This is made much easier by the development of oonline trading because computers calculate most transactions. Virtual trading can be used to test out new strategies without risk and also help educate students and inexperienced investors.",
-				coordinators: ["Shashank Dev Ratrey : +91-7974849604","Sumit Sharma : +91-9981223582 "],
-				logo: "../static/logo/vt.png",
-				background: "../static/img/vt.jpg"
-			},
+			// {
+			// 	title: "Virtual Trading",
+			// 	pdfLink: "https://drive.google.com/file/d/1oGghXZ-n2Skzu-leCBQQZe3pd2r3bW-M/view?usp=sharing",
+			// 	description: "Virtual Trading : A Digital Share Market.Virtual trading, A method of simulated trading where beginner traders can practice investing without using real money. This is made much easier by the development of oonline trading because computers calculate most transactions. Virtual trading can be used to test out new strategies without risk and also help educate students and inexperienced investors.",
+			// 	coordinators: ["Shashank Dev Ratrey : +91-7974849604","Sumit Sharma : +91-9981223582 "],
+			// 	logo: "../static/logo/vt.png",
+			// 	background: "../static/img/vt.jpg"
+			// },
     	]},
 
 		{
@@ -245,25 +254,26 @@ export const Managment = [
 			mainEvents:[
 			  {
 				title: "Model & Paper Presentation",
-				pdfLink: "https://drive.google.com/file/d/1m2B-OoAv7DnTcor6ylR3HqCanFZzcQoT/view?usp=sharing",
+				pdfLink: "https://drive.google.com/open?id=1TS_uXC9i7dIvGDJtZ1CVfKwCugMOJEll",
 				description: "Navrachna is a innovation model and paper presentation competition in which you will showcase your creativity by using the natural elements to its maximum limits. Ex.- By using natural elements like sunlight, water, soil,wind, sand, leaves etc.",
 				coordinators: ["Rishabh Singh : +91-8517817641","Chandan Banjare : +91-7489705454"],
 				logo: "../static/logo/Navrachna-og.png",
 				background: "../static/img/pre.jpg"
 			},]
 		},
-		{
-			tabButton: "Innovation",
-			tabIcon: Dashboard,
-			mainEvents:[
-			  {
-				title: "Startup Innovation",
-				pdfLink: "https://drive.google.com/file/d/0B8oHXx9npsPdVzdzTjRpUXdpNUhpdHJxUTJRNTVWNHhrTkUw/view?usp=sharing",
-				description: "There is the competition to pitch up your  innovative idea and turn it to a Startup, and win amazing prizes.",
-				coordinators: ["Prerna Tiwari : +91-9644576310"],
-				logo: "../static/logo/Startup-og.png",
-				background: "../static/img/tech.jpg"
-			},]
-		}
+		// {
+		// 	tabButton: "Innovation",
+		// 	tabIcon: Dashboard,
+		// 	mainEvents:[
+		// 	  {
+		// 		title: "Startup Innovation",
+		// 		pdfLink: "https://drive.google.com/file/d/0B8oHXx9npsPdVzdzTjRpUXdpNUhpdHJxUTJRNTVWNHhrTkUw/view?usp=sharing",
+		// 		description: "There is the competition to pitch up your  innovative idea and turn it to a Startup, and win amazing prizes.",
+		// 		coordinators: ["Prerna Tiwari : +91-9644576310"],
+		// 		logo: "../static/logo/Startup-og.png",
+		// 		background: "../static/img/tech.jpg"
+		// 	},
+		// ]
+		// }
 
 	]
