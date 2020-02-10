@@ -17,6 +17,7 @@ import Calender from '../components/Calendar/Calendar';
 import ReactFullpage from '@fullpage/react-fullpage';
 import Footer from '../components/Footer/Footer';
 import Faq from '../components/Faq/Faq';
+import Video from '../components/Video/Video';
 
 const styles = theme => ({
   root:
@@ -29,22 +30,33 @@ const styles = theme => ({
   })
 
   const styles1 = {
-    backgroundImage:'url(http://getwallpapers.com/wallpaper/full/b/0/6/263616.jpg)',
+    backgroundImage:'url(../static/img/bg/building.jpg)',
     backgroundSize:'cover',
   };
   const styles2 = {
-    backgroundImage:'url(https://images.unsplash.com/photo-1547756536-cde3673fa2e5)',
+    backgroundImage:'url(../static/img/bg/train.jpeg)',
     backgroundSize:'cover'
   };
   const styles3 = {
-    backgroundImage:'url(https://images.unsplash.com/photo-1551269901-5c5e14c25df7)',
+    backgroundImage:'url(../static/img/bg/paperbg.jpg)',
     backgroundSize:'cover',
     // opacity:'0.5'
   };
   const styles4 = {
-    backgroundImage:'url(http://getwallpapers.com/wallpaper/full/9/7/7/263576.jpg)',
+    backgroundImage:'url(../static/img/bg/book.jpg)',
     backgroundSize:'cover',
     // opacity:'0.5'
+  };
+  const styles5 = {
+    backgroundImage:'url(../static/img/bg/contacts.jfif)',
+    backgroundSize:'100% auto',
+    backgroundRepeat: 'repeat',
+    backgroundColor: (0,0,0)
+    // opacity:'0.5'
+  };
+  const styles6 = {
+    backgroundImage:'url(../static/img/bg/videobg.jpg)',
+    backgroundSize:'cover',
   };
   
 
@@ -58,11 +70,12 @@ class App extends React.Component {
     return(
       <>
         <Head>
-          <link rel='stylesheet/css' src='../static/css/styles.css' />
+          <link rel='stylesheet' src='../static/css/styles.css' />
+          <title>Avesh: Chapter 4</title>
         </Head>
         <ReactFullpage
           //fullpage options
-          scrollingSpeed = {750}
+          scrollingSpeed = {500}
           navigation={false}
           autoScrolling={true}
           controlArrows= {false}
@@ -72,7 +85,7 @@ class App extends React.Component {
           render={({ state, fullpageApi }) => {
             return (
               <ReactFullpage.Wrapper>
-                <Navbar />
+                <Navbar st='absolute'/>
                 <div className="section" style={styles1}>
                   <MainImg />
                 </div>
@@ -82,17 +95,28 @@ class App extends React.Component {
                 <div className="section" style={styles3}>
                   <Events/>
                 </div>
+                <div className="section" style={styles6}>
+                  <Video />
+                </div>
                 <div className="section" style={styles4}>
                   <Faq/>
                 </div>
-                <div className="section">
-                  <About />
+                <div className="section" style={styles5}>
+                  {/* <About /> */}
                   <Footer />
                 </div>
               </ReactFullpage.Wrapper>
             );
           }}
         />
+        <style>
+
+          {`
+            .fp-tableCell{
+              background-color:rgba(0,0,0,0.3);
+            }
+          `}
+        </style>
         </>
       )
     }

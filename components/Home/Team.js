@@ -13,7 +13,7 @@ import GridContainer from '../Grid/GridContainer';
 import GridItem from '../Grid/GridItem';
 import LayoutBody from '../Layout/LayoutBody';
 import Typography from '../Typography/Typography';
-import Link from 'next/link'
+import Link from 'next/link';
 
 const styles = theme => ({
   root:
@@ -22,21 +22,36 @@ const styles = theme => ({
     marginBottom: theme.spacing.unit * 4,
 	},
   container : {
-    padding : "8vh"
+    padding : "5vh",
+    [theme.breakpoints.down('sm')]:{
+      padding: '4vh 1vh'
+    }
   },
   card: {
     marginTop:"2.5vh",
     padding: theme.spacing.unit * 2,
     width : 216,
-    [theme.breakpoints.down("sm")]: {
-      width:214,
+    
+    // [theme.breakpoints.down("sm")]: {
+    //   width:214,
+    // }, 
+    [theme.breakpoints.down('sm')]: {
+      width: '90%',
+      // height: 100,
     },
+    //  [theme.breakpoints.up('md')]: {
+    //   height: 230,
+    // },
+    //  [theme.breakpoints.up('lg')]: {
+    //   height: 280,
+    // },
     height: "100%",
-    borderRadius:3,
+    borderRadius:10,
+    // borderShadow:0 2 0 10 'red'  
   },
   media: {
-    width : 182,
-    height: 180,
+    width : 122,
+    height: 120,
     borderRadius:'50%',
   },
  });
@@ -46,7 +61,7 @@ function ProductCategories(props) {
 
   return (
     <LayoutBody className={classes.root} component="section" width="large">
-      <Typography variant="h4" marked="center" align="center" component="h2" style={{marginTop:90,fontFamily: 'cursive'}}>
+      <Typography variant="h1" marked="center" align="center" component="h2" style={{textShadow:'2px 8px 2px black',letterSpacing:'0.2em',fontSize:'4em',marginTop:60,fontFamily: 'Harry',color:'white'}}>
         Our Team
       </Typography>
 
@@ -55,20 +70,23 @@ function ProductCategories(props) {
       direction="row"
       alignItems="center"
       justify="center"
-
+      classes={{label: 'MuiGrid-container-288'}}
       className={classes.container}
       >
       <GridItem xs={11} md={4} lg={4} align='center'>
-          <Card className={classes.card}>
+          <Card className={classes.card} id = "cardanim">
             <CardActionArea>
               <CardMedia
                 className={classes.media}
-                image="../static/team/aniket.JPG"
+                image="../static/team/aksir.jpg"
               />
               <CardContent>
-                <Typography variant="button" component="h2" align="center" >
-                  <b> <hr style={{width:'70%'}}/>President </b>
-                </Typography>
+                <Link href="">
+                    <Typography variant="button" component="h2" align="center" >
+                      <b className={classes.names}> <hr style={{width:'70%'}}/>Akarshit Shrivastav </b>
+                      <b className={classes.names}> <hr style={{width:'70%'}}/>President </b>
+                    </Typography>
+                </Link>
               </CardContent>
             </CardActionArea>
             </Card>
@@ -79,23 +97,50 @@ function ProductCategories(props) {
             <CardActionArea>
               <CardMedia
                 className={classes.media}
-                image="../static/team/shweta.JPG"
+                image="../static/team/rishabh.jpg"
               />
               <CardContent>
-                <Typography variant="button" component="h2" align="center">
-                  <b> <hr style={{width:'70%'}}/> Secretary </b>
-                </Typography>
+              <Link href="">
+                    <Typography variant="button" component="h2" align="center">
+                      <b className={classes.names}> <hr style={{width:'70%'}}/>Rishabh Singh </b>
+                      <b className={classes.names}> <hr style={{width:'70%'}}/> Fest-Coordinator </b>
+                    </Typography>
+              </Link>
+              </CardContent>
+            </CardActionArea>
+       </Card>
+      </GridItem>
+
+      <GridItem xs={11} md={4} lg={4} align='center'>
+       <Card className={classes.card}>
+            <CardActionArea>
+              <CardMedia
+                className={classes.media}
+                image="../static/team/devesh.jpg"
+              />
+              <CardContent>
+              <Link href="">
+                    <Typography variant="button" component="h2" align="center">
+                    <b className={classes.names}> <hr style={{width:'70%'}}/>Devesh Joshi </b>
+                    <b className={classes.names}> <hr style={{width:'70%'}}/>Fest-Coordinator</b>
+                    </Typography>
+              </Link>
               </CardContent>
             </CardActionArea>
        </Card>
       </GridItem>
 
       </GridContainer>
-      <Link href="/AllTeam">
+      {/* <Link href="/AllTeam">
         <Typography variant="button" align="center" component="h2" style={{color:"#424242"}}>
-            <Button variant="outlined" color="secondary" style={{padding:10}}><b>More Team...</b></Button>
+            <Button variant="outlined" color="secondary" style={{padding:10}}><b>More</b></Button>
         </Typography>
-      </Link>
+      </Link> */}
+      <style jsx>{`
+      #cardanim{
+        background:red;
+      }
+      `}</style>
     </LayoutBody>
   );
 }

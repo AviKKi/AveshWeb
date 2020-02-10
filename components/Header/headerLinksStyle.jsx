@@ -45,6 +45,8 @@ const headerLinksStyle = theme => ({
   marginLeft:50,
   [theme.breakpoints.down("sm")]: {
       marginLeft:10,
+      width: 75,
+      height: 75
     },
   },
   navLink: {

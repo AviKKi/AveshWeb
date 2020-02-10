@@ -7,13 +7,16 @@ const styles = theme => ({
         margin: 'auto'
     },
     text:{
-        fontSize: '0.8rem',
+        fontSize: '01rem',
         display: 'block',
-        color:'white'
+        color:'white',
     },
     tick:{
         fontSize:'2.5rem',
-        color:'white'
+        color:'white',
+        [theme.breakpoints.down('sm')]:{
+            fontSize: '2rem'
+        }
     }
 })
 
@@ -72,7 +75,7 @@ class Clock extends Component{
             </div>
             <div className="clock">
                 <div className={classes.tick}>{this.leading0(this.state.seconds)}</div>
-                <div className={classes.text}>sec</div>
+                <div className={classes.text}>seconds</div>
             </div>
             <style jsx>{`
             
@@ -80,6 +83,7 @@ class Clock extends Component{
                 width: 75px;
                 height: 75px;
                 display: flex;
+                font-family: 'Harry';
                 border-radius: 50%;
                 border: 2px solid #d40404;
                 justify-content: center;
@@ -89,6 +93,10 @@ class Clock extends Component{
                 flex-direction: column;
                 background-color:rgba(0,0,0,0.3);
                 animation:glow 1.25s ease-in infinite;
+            }
+            @font-face{
+                font-family: Harry,
+                src: url('../font/HARRYP__.TTF')
             }
             @keyframes glow{
                 0%{
@@ -104,7 +112,13 @@ class Clock extends Component{
                     box-shadow:0px 0px -10px gold;
                 }
             }
-            
+            @media (max-width:400px){
+                .clock{
+                    margin: 5px;
+                    width: 60px;
+                    height: 60px
+                }
+            }
             `}</style>
         </div>
         )

@@ -21,15 +21,17 @@ const styles = theme => ({
     name:{
         width: '25%',
         height: '225px',
-        margin: '20px',
-        backgroundImage: "url(../../static/img/2020/avesh.png)",
+        margin: '10px 20px',
+        marginTop: '40px',
+        // backgroundImage: "url(../../static/img/2020/avesh.png)",
         backgroundSize:'cover',
         backgroundColor: 'rgba(25,40,65,0.5)',
         borderRadius: '25px',
         
         [theme.breakpoints.down('sm')]:{
             width: '90%',
-            height: '200px'
+            height: '190px',
+            marginTop:'10px'
         },
         [theme.breakpoints.up('sm')]:{
             width: '40%'
@@ -38,8 +40,16 @@ const styles = theme => ({
             width: '35%'
         },
         [theme.breakpoints.up('lg')]:{
-            width: '27%'
+            width: '30%'
         },
+    },
+    heading:{
+        fontFamily: 'Harry', 
+        fontSize:'2rem',
+        [theme.breakpoints.down('sm')]:{
+            fontSize:'1.5rem',
+            padding: '20px'
+        }
     }
 })
 
@@ -48,10 +58,10 @@ function MainImg(props){
     return (
         <>
             <div className={classes.root}>
-                <h3 style={{fontFamily: 'Harry', fontSize:'2rem'}}>Government Engineering College, Raipur</h3>
+                <h3 className={classes.heading}>Government Engineering College, Raipur</h3>
                 <h2>Presents</h2>
                 <div className={classes.name}>
-                    {/* <img src="../../static/img/2020/avesh.png"/> */}
+                    <img src="../../static/img/2020/avesh.png" width="100%" height="100%"/>
                 </div>
                 <div>
                     <h2 style={{marginTop: '50px'}}>EXPLORE. DREAM. DISCOVER</h2>
@@ -62,19 +72,9 @@ function MainImg(props){
                     font-family: Harry;
                     src: url(static/font/HARRYP__.TTF);
                 }
-                h1,h3,h4,h2{
+                h3,h2{
                     margin:0px;
-                    // margin-left: 150px;
-                }
-                h3,h4,h2{
                     letter-spacing: 0.2rem;
-                }
-                h1{
-                    margin: 0;
-                    letter-spacing: 0.4rem;
-                    font-size: 7rem;
-                    padding-top: 60px;
-                    margin-left: 150px
                 }
             `}</style>
         </>

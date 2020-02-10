@@ -9,8 +9,8 @@ import Link from 'next/link';
 
 const styles = theme => ({
   root: {
-    marginTop: theme.spacing.unit * 8,
-    marginBottom: theme.spacing.unit * 4,
+    // marginTop: theme.spacing.unit * 8,
+    // marginBottom: theme.spacing.unit * 4,
     // backgroundImage: 'url(https://images.unsplash.com/photo-1551269901-5c5e14c25df7)',
     // backgroundSize: 'cover'
     // backgroundColor: 'rgba(0,0,0)'
@@ -100,7 +100,7 @@ function ProductCategories(props) {
   const images = [
     {
       url:
-        '../static/img/tech.jpg',
+        '../static/img/bg/tech.jpg',
       title: 'Technical',
       width: '33.33%',
       link: './TechEvent'
@@ -114,7 +114,7 @@ function ProductCategories(props) {
     },
     {
       url:
-       '../static/img/management.jpg',
+       '../static/img/bg/mgmt.jpg',
       title: 'Management',
       width: '33.33%',
       link: '/ManagementEvent'
@@ -124,9 +124,9 @@ function ProductCategories(props) {
   return (
   <div id="Events">
     <LayoutBody className={classes.root} component="section" width="large">
-      <Typography variant="h4" marked="center" align="center" component="h2" style={{fontFamily: 'Harry', color:"#FFF"}}>
-        Events
-      </Typography>
+      {/* <Typography variant="h4" marked="center" align="center" component="h2"  style={{ textShadow:'2px 8px 2px black',letterSpacing:'0.2em',textAlign: 'center', fontFamily: 'Harry', fontSize: '4em', color:'#FFF'}}> */}
+        <h2 style={{ textShadow:'2px 8px 2px black',letterSpacing:'0.1em',textAlign: 'center', fontFamily: 'Harry', fontSize: '4em', color:'#FFF',margin:'0'}}>Events</h2>
+      {/* </Typography> */}
       
       <div className={classes.images}>
         {images.map(image => (

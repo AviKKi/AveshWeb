@@ -54,10 +54,10 @@ class Calender extends React.Component{
     const {classes} = this.props;
         return (
             <div className={classes.root}>
-                <h1 style={{ textShadow:'2px 8px 2px black',letterSpacing:'0.2em',textAlign: 'center', fontFamily: 'Harry', fontSize: '4em', color:'#FFF'}}>Mark The Dates</h1>
+                <h1 className="timer"  style={{ textShadow:'2px 8px 2px black',letterSpacing:'0.1em',textAlign: 'center', fontFamily: 'Harry', fontSize: '4em', color:'#FFF',margin:'10'}}>Mark The Dates</h1>
               <div className={classes.root_inside}>
                 <div className={classes.calender}>
-                    <img src="static/img/2020/cal.png" style={{width:"60%", height:"auto" , }}/>
+                    <img src="static/img/2020/cal.png" style={{width:"80%", height:"auto" , }}/>
                 </div>
                 <div>
                     <Clock 
@@ -66,6 +66,26 @@ class Calender extends React.Component{
                     />
                 </div>
               </div>
+              <style jsx>{`
+                #main:hover{
+                    transform:scale(1.05);
+                  }
+                  .timer{
+                    animation:moveshadow 3s ease-in infinite;
+                  }
+                  @keyframes moveshadow{
+                    0%{
+                      text-shadow:2px 5px 2px green;
+                    }
+                    50%{
+                      text-shadow:1px 6px 3px yellow;
+                    }
+                    100%{
+                      text-shadow:2px 4px 4px blue;
+                    }
+      
+                  }
+              `}</style>
             </div>
         );
     }

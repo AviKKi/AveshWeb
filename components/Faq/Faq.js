@@ -4,12 +4,13 @@ import MuiExpansionPanel from '@material-ui/core/ExpansionPanel';
 import MuiExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import MuiExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import Typography from '@material-ui/core/Typography';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 import FAQ from '../../data/FAQ';
 
 const ExpansionPanel = withStyles(theme=>({
     root: {
-        opacity: 0.8,
+        
       border: '1px solid rgba(0, 0, 0, .125)',
       [theme.breakpoints.up('md')]:{
         width: '80%',
@@ -59,7 +60,7 @@ const ExpansionPanel = withStyles(theme=>({
 
 function Faq(props){
     const {classes} = props;
-    const [expanded, setExpanded] = React.useState('panel1');
+    const [expanded, setExpanded] = React.useState('panel10');
 
   const handleChange = panel => (event, newExpanded) => {
     setExpanded(newExpanded ? panel : false);
@@ -67,19 +68,21 @@ function Faq(props){
 
     return (
         <div id="faq">
-            <h2>FAQ</h2>
-            {FAQ.map((el,i) => (
-                <ExpansionPanel square expanded={expanded === "panel"+i} onChange={handleChange("panel"+i)}>
-                <ExpansionPanelSummary aria-controls={"panel"+i+"d-content"} id={"panel"+i+"d-header"}>
-                  <Typography>Q : {el.que}</Typography>
-                </ExpansionPanelSummary>
-                <ExpansionPanelDetails>
-                  <Typography>
-                      {el.ans}
-                  </Typography>
-                </ExpansionPanelDetails>
-              </ExpansionPanel>
-            ))}
+            <h2  style={{margin:'10px', textShadow:'2px 8px 2px black',letterSpacing:'0.2em',textAlign: 'center', fontFamily: 'Harry', fontSize: '4em', color:'#FFF'}}>FAQ</h2>
+            <div style={{marginTop: '60px',opacity: '0.9'}}>
+              {FAQ.map((el,i) => (
+                  <ExpansionPanel square expanded={expanded === "panel"+i} onChange={handleChange("panel"+i)}>
+                  <ExpansionPanelSummary aria-controls={"panel"+i+"d-content"} id={"panel"+i+"d-header"} expandIcon={<ExpandMoreIcon />}>
+                    <Typography>Q : {el.que}</Typography>
+                  </ExpansionPanelSummary>
+                  <ExpansionPanelDetails>
+                    <Typography>
+                        {el.ans}
+                    </Typography>
+                  </ExpansionPanelDetails>
+                </ExpansionPanel>
+              ))}
+            </div>
             <style jsx>{`
                 h2{
                     font-family: Harry;

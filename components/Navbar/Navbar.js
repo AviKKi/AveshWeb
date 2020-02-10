@@ -50,6 +50,16 @@ const navLinks = {
             show: 'always',
         },
         {
+            link: '/AllTeam',
+            label: 'Team',
+            show: 'always',
+        },
+        {
+            link: '/#faq',
+            label: 'FAQ',
+            show: 'always',
+        },
+        {
             link: '/#footer',
             label: 'Contact Us',
             show: 'always',
@@ -154,7 +164,7 @@ class SectionNavbars extends React.Component {
     console.log("SectionNavbars",{clickHandler})
     return (
       <div className={classes.section}>
-        <div id="navbar" className={classes.navbar}>
+        <div id="navbar" className={classes.navbar} style={{position: this.props.st}}>
             <Header
               color="dark"
               leftLinks={
