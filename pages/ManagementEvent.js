@@ -16,7 +16,6 @@ import pillsStyle from "../components/NavPills/pillsStyle.jsx";
 import SubEvent from "../components/Event/SubEvent";
 
 import Layout from "../components/Layout/Layout"
-import Footer from "../components/Footer/Footer";
 import Navbar from "../components/Navbar/Navbar";
 //import Events from "../data/Events"
 import { Managment } from "../data/Events"

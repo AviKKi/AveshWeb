@@ -22,6 +22,7 @@ const CustomListItem = withStyles(navbarsStyle)((props)=>{
       <Link href={link}>
         <Button
         className={classes.navLink}
+        style={{padding:'12px 20px'}}
           onClick={
             ()=>{
               try{

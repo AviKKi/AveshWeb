@@ -107,7 +107,7 @@ function ProductCategories(props) {
     },
     {
       url:
-        '../static/img/non.jpg',
+        '../static/img/bg/non-tech.jfif',
       title: 'Non-Technical',
       width: '33.33%',
       link: '/NonTechnicalEvent'

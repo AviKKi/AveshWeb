@@ -32,6 +32,7 @@ const styles = theme => ({
   const styles1 = {
     backgroundImage:'url(../static/img/bg/building.jpg)',
     backgroundSize:'cover',
+    backgroundPosition: 'center'
   };
   const styles2 = {
     backgroundImage:'url(../static/img/bg/train.jpeg)',

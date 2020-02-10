@@ -50,6 +50,16 @@ const styles = theme => ({
             fontSize:'1.5rem',
             padding: '20px'
         }
+    },
+    tagLine:{
+        marginTop: '50px',
+        fontSize: "1.5rem",
+        [theme.breakpoints.down('sm')]:{
+            fontSize:"1.2rem"
+        },
+        [theme.breakpoints.down('xs')]:{
+            fontSize:"0.9rem"
+        }
     }
 })
 
@@ -64,7 +74,7 @@ function MainImg(props){
                     <img src="../../static/img/2020/avesh.png" width="100%" height="100%"/>
                 </div>
                 <div>
-                    <h2 style={{marginTop: '50px'}}>EXPLORE. DREAM. DISCOVER</h2>
+                    <h2 className={classes.tagLine}>EXPLORE.DREAM.DISCOVER</h2>
                 </div>
             </div>
             <style jsx>{`
