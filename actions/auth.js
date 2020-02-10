@@ -70,11 +70,11 @@ export const registerUser = (payload)=> async dispatch=>{
         dispatch({type:SHOW_TOPLOADER})
         console.log(payload)
         let res = await axios.post('users/registration', payload, {headers:{"Content-Type":"application/json"}})
-        const token = token
+        const token = res.data.key
         const profile = fetchProfile(token)
-        // dispatch({ type:SET_USER, payload:{profile} })
-        // dispatch({type:AUTH_USER, payload:{username:payload.username, token:token}})
-        Router.push('/LoginPage')
+        dispatch({ type:SET_USER, payload:{profile} })
+        dispatch({type:AUTH_USER, payload:{username:payload.username, token:token}})
+        Router.push('/UserDashboard')
     } catch (e) {
         const error = Object.keys(e.response.data)[0]+":"+Object.values(e.response.data)[0][0]
         dispatch({type:POP_SNACKBAR, payload:{snackbarMessage:error}})
