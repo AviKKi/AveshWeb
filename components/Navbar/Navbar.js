@@ -164,7 +164,7 @@ class SectionNavbars extends React.Component {
     const { classes, clickHandler } = this.props;
     console.log("SectionNavbars",{clickHandler})
     return (
-      <div className={classes.section}>
+      <div className={classes.section} style={{height:"210px"}}>
         <div id="navbar" className={classes.navbar} style={{position: this.props.st}}>
             <Header
               color="dark"
