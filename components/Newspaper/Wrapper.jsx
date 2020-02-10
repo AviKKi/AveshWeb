@@ -18,6 +18,5 @@ const styles = {
         margin: "30px 0px",
         padding: "10px 20px",
         backgroundSize: 'cover',
-        minHeight: '800px',
     },
 }
