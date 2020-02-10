@@ -5,17 +5,18 @@ import Snackbar from '@material-ui/core/Snackbar'
 import ClassNames from 'classnames'
 import { connect } from 'react-redux'
 import {
-    HIDE_SNACKBAR
+  HIDE_SNACKBAR
 } from '../../actions/actionTypes'
 import { withStyles } from '@material-ui/core/styles'
 import CustomSnackbar from './CustomSnackbar'
 
 const styles = theme => {
-    return {
+  return {
     root: {
-        backgroundColor: "#1e88e5",
+      backgroundColor: "#1e88e5",
     }
-}}
+  }
+}
 
 // const CustomSnackbar = withStyles(styles)(
 //     (props)=>{
@@ -23,12 +24,12 @@ const styles = theme => {
 //     }
 // )
 //autoHideDuration={5000}
-const  Layout = props => {
-  const { snackbar, snackbarMessage, dispatch } =  props
+const Layout = props => {
+  const { snackbar, snackbarMessage, dispatch, st } = props
   return (
-  <>
-    <div style={{position:"absolute"}}>
-    {/*<CustomSnackbar
+    <>
+      <div style={{ position: "absolute" }}>
+        {/*<CustomSnackbar
         anchorOrigin={{
             vertical: 'bottom',
             horizontal: 'left',
@@ -38,32 +39,33 @@ const  Layout = props => {
         variant="info"
         message={snackbarMessage} />
         */}
-    <Snackbar
-        autoHideDuration={2500}
-        onClose = {()=>dispatch({type:HIDE_SNACKBAR})}
-        open={ snackbar }
-        variant="info"
-        message={ snackbarMessage }
-    />
-    </div>
-    <TopLoader />
-    <Navbar />
-      { props.children }
-    <Footer st="static"/>
-  </>
-)}
+        <Snackbar
+          autoHideDuration={2500}
+          onClose={() => dispatch({ type: HIDE_SNACKBAR })}
+          open={snackbar}
+          variant="info"
+          message={snackbarMessage}
+        />
+      </div>
+      <TopLoader />
+      <Navbar st={st} />
+      {props.children}
+      <Footer st="static" />
+    </>
+  )
+}
 
 export const withLayout = Component => props => (
   <Layout >
-    { Component }
+    {Component}
   </Layout>
 )
 
 const mapStateToProps = state => {
-    return {
-        snackbar: state.common.snackbar,
-        snackbarMessage: state.common.snackbarMessage
-    }
+  return {
+    snackbar: state.common.snackbar,
+    snackbarMessage: state.common.snackbarMessage
+  }
 }
 
 

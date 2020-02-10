@@ -149,7 +149,7 @@ class LoginPage extends React.Component {
   render() {
     const { classes, ...rest } = this.props;
     return (
-      <Layout>
+      <Layout st="static">
         <Snackbar
           message={this.state.snackbarMessage}
           open={this.state.snackbarState}

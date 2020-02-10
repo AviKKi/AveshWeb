@@ -70,7 +70,7 @@ class LoginPage extends React.Component {
   render() {
     const { classes, ...rest } = this.props
     return (
-        <Layout>
+        <Layout st="static">
         <div style={{
             backgroundImage: "url('../static/img/login1.jpg')",
             backgroundSize: 'cover',
