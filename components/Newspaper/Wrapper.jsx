@@ -2,9 +2,9 @@ import React from 'react';
 
 export default function Wrapper(props) {
     const { children, ...other } = props;
-    const style = {...styles.wrapper, ...props.style}
+    const style = { ...styles.wrapper, ...props.style }
     return (
-        <div  style={style}>
+        <div style={style}>
             {children}
         </div>
     )
