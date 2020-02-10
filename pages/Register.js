@@ -33,7 +33,7 @@ import CollegeList from '../data/Colleges'
 
 
 const DOMAIN = 'https://api.aveshgecr.in'
-const EMAIL_RE = '/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/'
+const EMAIL_RE = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
 
 class LoginPage extends React.Component {
   constructor(props) {
