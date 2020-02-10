@@ -2,7 +2,8 @@ import React from 'react'
 import EventCard from './EventCard'
 import { connect } from 'react-redux'
 import axios from 'axios'
-
+import GridContainer from "../Grid/GridContainer";
+import GridItem from "../Grid/GridItem";
 import {
     SHOW_TOPLOADER,
     HIDE_TOPLOADER
@@ -11,70 +12,71 @@ import {
 const DOMAIN = 'https://api.aveshgecr.in'
 // const DOMAIN = 'http://localhost:8080'
 
-class Participate extends React.Component{
+class Participate extends React.Component {
     state = {
         events: [],
     }
-    participateHandler = async(eventid)=>{
+    participateHandler = async (eventid) => {
         const { dispatch, token } = this.props
-        const { events}= this.state
-        dispatch({type:SHOW_TOPLOADER})
+        const { events } = this.state
+        dispatch({ type: SHOW_TOPLOADER })
         try {
             const res = await axios.post(
-                DOMAIN+'/users/enroll',
-                {eventid},
-                {headers:{
-                    'Authorization': `Token ${token}`
-                }}
+                DOMAIN + '/users/enroll',
+                { eventid },
+                {
+                    headers: {
+                        'Authorization': `Token ${token}`
+                    }
+                }
             )
-            if(res.data.success){
+            if (res.data.success) {
                 this.setState(prevState => ({
                     events: prevState.events.map(
                         obj => (obj.id === eventid ? Object.assign(obj, { participating: true }) : obj)
                     )
                 }));
-
             }
-            else{
-
+            else {
             }
         } catch (e) {
 
         } finally {
-            dispatch({type:HIDE_TOPLOADER})
+            dispatch({ type: HIDE_TOPLOADER })
         }
     }
 
-    componentDidMount = async()=>{
+    componentDidMount = async () => {
         const { dispatch, token } = this.props
-        dispatch({type:SHOW_TOPLOADER})
+        dispatch({ type: SHOW_TOPLOADER })
         try {
-            const res = await axios.get(DOMAIN+'/avesh/events',
+            const res = await axios.get(DOMAIN + '/avesh/events',
                 {
-                    headers:{
+                    headers: {
                         'Authorization': `Token ${token}`
                     }
                 })
-            console.log(res.data)
-            this.setState({events:res.data})
+            this.setState({ events: res.data })
         } catch (e) {
-            console.log(e)
         } finally {
-            dispatch({type:HIDE_TOPLOADER})
+            dispatch({ type: HIDE_TOPLOADER })
         }
     }
-    render(){
+    render() {
         const { events } = this.state
         return (
-            <>
-            {
-                events.map(e=><EventCard
-                    key={e.id}
-                    participateHandler={this.participateHandler.bind(this, e.id)}
-                    {...e} />)
-            }
-            </>
-    )}
+            <GridContainer spacing={1} style={{ overflow: 'hidden' }}>
+                {
+                    events.map(e =>
+                        <EventCard
+                            key={e.id}
+                            participateHandler={this.participateHandler.bind(this, e.id)}
+                            {...e} />
+                    )
+                }
+            </GridContainer>
+        )
+    }
 }
 
 export default connect()(Participate)
