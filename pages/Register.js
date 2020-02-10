@@ -161,7 +161,6 @@ class LoginPage extends React.Component {
           backgroundImage: "url('../static/img/login1.jpg')",
           backgroundSize: 'cover',
           width: '100%',
-          marginTop: -110,
         }}>
           <div className={classes.container}>
             <GridContainer justify="center">
