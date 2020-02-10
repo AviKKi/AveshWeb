@@ -46,7 +46,7 @@ class SectionPills extends React.Component {
                 />
         </div>
       </div>
-      <Footer /></>
+      <Footer st="static"/></>
     );
   }
 }

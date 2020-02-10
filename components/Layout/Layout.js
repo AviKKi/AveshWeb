@@ -49,7 +49,7 @@ const  Layout = props => {
     <TopLoader />
     <Navbar />
       { props.children }
-    <Footer />
+    <Footer st="static"/>
   </>
 )}
 
