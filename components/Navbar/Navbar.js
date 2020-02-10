@@ -22,6 +22,7 @@ const CustomListItem = withStyles(navbarsStyle)((props)=>{
       <Link href={link}>
         <Button
         className={classes.navLink}
+        style={{padding:'12px 20px'}}
           onClick={
             ()=>{
               try{
@@ -47,6 +48,16 @@ const navLinks = {
         {
             link: '/#Events',
             label: 'Events',
+            show: 'always',
+        },
+        {
+            link: '/AllTeam',
+            label: 'Team',
+            show: 'always',
+        },
+        {
+            link: '/#faq',
+            label: 'FAQ',
             show: 'always',
         },
         {
@@ -154,13 +165,15 @@ class SectionNavbars extends React.Component {
     console.log("SectionNavbars",{clickHandler})
     return (
       <div className={classes.section}>
-        <div id="navbar" className={classes.navbar}>
+        <div id="navbar" className={classes.navbar} style={{position: this.props.st}}>
             <Header
               color="dark"
               leftLinks={
-               <Link href="/"><a><img src="../static/logo/AveshFont.png" className={classes.logo} / ></a></Link>
-                      }
-
+               <Link href="/">
+                 <a><img src="../static/img/2020/logo2.png" className={classes.logo} /></a>
+                </Link>
+                    }
+              style={{height: '100%', width: 'auto'}}
               rightLinks={
                 <StyledRightLinks clickHandler={clickHandler} />
               }

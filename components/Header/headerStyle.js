@@ -21,9 +21,9 @@ const headerStyle = {
     marginBottom: "20px",
     color: "#bdbdbd",
     width: "100%",
-    backgroundColor: "#fff",
-    boxShadow:
-      "0 4px 18px 0px rgba(0, 0, 0, 0.12), 0 7px 10px -5px rgba(0, 0, 0, 0.15)",
+    backgroundColor: "transparent",
+    // boxShadow:
+    //   "0 4px 18px 0px rgba(0, 0, 0, 0.12), 0 7px 10px -5px rgba(0, 0, 0, 0.15)",
     transition: "all 150ms ease 0s",
     alignItems: "center",
     flexFlow: "row nowrap",
@@ -110,9 +110,9 @@ const headerStyle = {
   },
   dark: {
     color: "#FFFFFF",
-    backgroundColor: "#212121 !important",
+    backgroundColor: "transparent",
     boxShadow:
-      "0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 12px -5px rgba(33, 33, 33, 0.46)"
+       "none"
   },
   white: {
     border: "0",

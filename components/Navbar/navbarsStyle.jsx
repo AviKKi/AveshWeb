@@ -16,13 +16,14 @@ const navbarsStyle = theme => ({
   navbar: {
     marginBottom: "-20px",
     zIndex: "100",
-    position: "relative",
+    position: "absolute",
     overflow: "hidden",
     "& header": {
       borderRadius: "0"
     },
     opacity:0.8,
     width:'100%',
+    top: '0'
   },
   navigation: {
     backgroundPosition: "center center",
