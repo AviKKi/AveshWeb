@@ -42,6 +42,7 @@ class MyApp extends App {
         <Provider store={reduxStore}>
         <Head>
           <title>Avesh 3.0</title>
+          <link rel="stylesheet" type="text/css" href="static/css/parent.css"/>
         </Head>
         {/* Wrap every page in Jss and Theme providers */}
         <JssProvider
