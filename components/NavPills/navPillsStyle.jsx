@@ -140,6 +140,10 @@ const navPillsStyle = theme => ({
   alignCenter: {
     alignItems: "center",
     justifyContent: "center"
+  },
+  tabColor:{
+    backgroundColor: "#A77440",
+    color: '#fff'
   }
 });
 

@@ -1,12 +1,17 @@
 import Dashboard from "@material-ui/icons/Dashboard";
 import Search from "@material-ui/icons/Search";
 import VideogameAsset from "@material-ui/icons/VideogameAsset";
-
+import ComputerIcon from '@material-ui/icons/Computer';
+import AirplanemodeActiveIcon from '@material-ui/icons/AirplanemodeActive';
+import LocationCityIcon from '@material-ui/icons/LocationCity';import BuildIcon from '@material-ui/icons/Build';
+import WbIncandescentIcon from '@material-ui/icons/WbIncandescent';
+import SlideshowIcon from '@material-ui/icons/Slideshow';
+import BusinessCenterIcon from '@material-ui/icons/BusinessCenter';
 
 export const Technical =
 		[{
 			tabButton: "HashMap",
-			tabIcon: Dashboard,
+			tabIcon: ComputerIcon,
 			ribbon: '../static/img/ribbon/ribbon_hashmap.png',
 			mainEvents:[
 				{
@@ -39,7 +44,7 @@ export const Technical =
 			},
 			{
 				tabButton: "Robotics",
-				tabIcon: Dashboard,
+				tabIcon: BuildIcon,
 				ribbon: '../static/img/ribbon/ribbon_robotics.png',
 				mainEvents:[{
 					title: "Robo Drift",
@@ -94,7 +99,7 @@ export const Technical =
 			// },
 			{
 			tabButton: "Pranoda",
-			tabIcon: Dashboard,
+			tabIcon: AirplanemodeActiveIcon,
 			ribbon: '../static/img/ribbon/ribbon_pranod.png',
 			mainEvents:[
 				{
@@ -122,7 +127,7 @@ export const Technical =
 			// },
 			{
 				tabButton: "Stratum",
-				tabIcon: Dashboard,
+				tabIcon: LocationCityIcon,
 				ribbon: '../static/img/ribbon/ribbon_stratum.png',
 				mainEvents:[
 				  {
@@ -217,7 +222,7 @@ export const NonTechnical = [
 
 		{
 			tabButton: "Other Events",
-			tabIcon: Dashboard,
+			tabIcon: WbIncandescentIcon,
 			ribbon: '../static/img/ribbon/ribbon_pariksh.png',
 			mainEvents:[
 			 /* {
@@ -252,7 +257,7 @@ export const NonTechnical = [
 export const Managment = [
 	    {
 			tabButton: "E-Strategy",
-			tabIcon: Dashboard,
+			tabIcon: BusinessCenterIcon,
 			ribbon: '../static/img/ribbon/ribbon_estrategy.png',
 			mainEvents:[
 			  {
@@ -276,7 +281,7 @@ export const Managment = [
 
 		{
 			tabButton: "Navrachna",
-			tabIcon: Dashboard,
+			tabIcon: SlideshowIcon,
 			ribbon: '../static/img/ribbon/ribbon_navrachna.png',
 			mainEvents:[
 			  {
