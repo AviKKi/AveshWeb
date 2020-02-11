@@ -3,10 +3,10 @@ import Wrapper from './Wrapper'
 import { H1 } from './Heading'
 import Article from './Article'
 
-const Newspaper = ({ articles, onClick }) => (
+const Newspaper = ({ ribbon,articles, onClick }) => (
     <Wrapper style={styles.wrapper}>
         <H1 style={styles.heading}>
-            <img height="150px" src="../static/img/ribbon_robotics.png" />
+            <img height="150px" src={ribbon} />
         </H1>
         <div style={styles.mainContent}>
             {articles.map(artcl => <Article {...artcl} onClick={onClick.bind(this, artcl)} content={artcl.description} />)}

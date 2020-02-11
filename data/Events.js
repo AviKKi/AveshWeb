@@ -7,6 +7,7 @@ export const Technical =
 		[{
 			tabButton: "HashMap",
 			tabIcon: Dashboard,
+			ribbon: '../static/img/ribbon/ribbon_hashmap.png',
 			mainEvents:[
 				{
 					title: "Cybertron(Frontend)",
@@ -36,6 +37,7 @@ export const Technical =
 			{
 				tabButton: "Robotics",
 				tabIcon: Dashboard,
+				ribbon: '../static/img/ribbon/ribbon_robotics.png',
 				mainEvents:[{
 					title: "Robo Drift",
 					pdfLink: "https://drive.google.com/open?id=1xGlLq17ZwBCvLgFZMjeSxUWmqyT0bT6M",
@@ -86,6 +88,7 @@ export const Technical =
 			{
 			tabButton: "Pranoda",
 			tabIcon: Dashboard,
+			ribbon: '../static/img/ribbon/ribbon_pranod.png',
 			mainEvents:[
 				{
 					title: "Pranoda",
@@ -112,6 +115,7 @@ export const Technical =
 			{
 				tabButton: "Stratum",
 				tabIcon: Dashboard,
+				ribbon: '../static/img/ribbon/ribbon_stratum.png',
 				mainEvents:[
 				  {
 					title: "Setu",
@@ -144,6 +148,7 @@ export const NonTechnical = [
 	    {
 			tabButton: "Lan Gaming",
 			tabIcon: VideogameAsset,
+			ribbon: '../static/img/ribbon/ribbon_gaming.png',
 			mainEvents:[
 			  {
 				title: "PubG Mobile",
@@ -182,6 +187,7 @@ export const NonTechnical = [
 		{
 			tabButton: "Who Dunn it?",
 			tabIcon: Search,
+			ribbon: '../static/img/ribbon/ribbon_who.png',
 			mainEvents:[
 			  {
 				title: "Who Dunn it?",
@@ -196,6 +202,7 @@ export const NonTechnical = [
 		{
 			tabButton: "Other Events",
 			tabIcon: Dashboard,
+			ribbon: '../static/img/ribbon/ribbon_pariksh.png',
 			mainEvents:[
 			 /* {
 				title: "photography",
@@ -229,6 +236,7 @@ export const Managment = [
 	    {
 			tabButton: "E-Strategy",
 			tabIcon: Dashboard,
+			ribbon: '../static/img/ribbon/ribbon_estrategy.png',
 			mainEvents:[
 			  {
 				title: "Accio Magnate(Corporate Roadies)",
@@ -251,6 +259,7 @@ export const Managment = [
 		{
 			tabButton: "Navrachna",
 			tabIcon: Dashboard,
+			ribbon: '../static/img/ribbon/ribbon_navrachna.png',
 			mainEvents:[
 			  {
 				title: "Model & Paper Presentation",

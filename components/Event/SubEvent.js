@@ -149,6 +149,7 @@ class Events extends React.Component {
         <div className={classes.images}>
           <Newspaper
             onClick={this.toggleDetails}
+            ribbon={subEvents.ribbon}
             articles={subEvents["mainEvents"]} />
         </div>
       </>
