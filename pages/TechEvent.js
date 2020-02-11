@@ -28,7 +28,7 @@ class SectionPills extends React.Component {
     })
     return (
       <Layout>
-        <div className={classes.section} style={{ marginTop: '124px', width: '100%', marginVerticle: "30px" }}>
+        <div className={classes.section} style={{ marginTop: '90px', width: '100%', padding:'10px 0'}}>
           <div className={classes.container} className='responsiveWindow'>
             <NavPills color="success" tabs={tabs} />
           </div>

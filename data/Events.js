@@ -244,7 +244,7 @@ export const NonTechnical = [
 			{
 				title: "Pariksh",
 				pdfLink: "https://drive.google.com/open?id=1R9o08jhWnxbeQjhIXGdgpdvu29IvQulR",
-				description: "It's a Quiz competition. The event contain questions regarding technical, management and a little general knowledge & current issues.",
+				description: "It's a Quiz competition. The event contain questions regarding technical, management and a little general knowledge & current issues. Come and test your knowledge and win exicting prizes.",
 				coordinators: ["Harshit Kesari : 9399264043","Kriti Shrivastava : 9575339737"],
 				logo: "../static/logo/Pariksh-og.png",
 				background: "../static/img/quiz.jpg",

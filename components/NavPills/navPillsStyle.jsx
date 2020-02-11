@@ -38,7 +38,7 @@ const navPillsStyle = theme => ({
     textAlign: "center",
     transition: "all .3s",
     padding: "0px 0px",
-    color: "#555555",
+    color: "#fff",
     height: "auto",
     opacity: "1",
     maxWidth: "100%",
