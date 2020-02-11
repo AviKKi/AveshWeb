@@ -23,7 +23,7 @@ export default [{
 },
 {
     que:"Will accomodation be provided ?",
-    ans:"We'll try to accomodate participants if they're coming from far places, Contact - 8839055202 for details!!"
+    ans:"We'll try to accomodate participants if they're coming from far places, Contact - Alka Tiwari 8839055202 for details!!"
 }
 ];
 

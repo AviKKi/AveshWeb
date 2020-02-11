@@ -39,8 +39,9 @@ const styles = theme => ({
     backgroundSize:'cover'
   };
   const styles3 = {
-    backgroundImage:'url(../static/img/bg/paperbg.jpg)',
+    backgroundImage:'url(../static/img/bg/events.jpg)',
     backgroundSize:'cover',
+    // backgroundPosition: 'center'
     // opacity:'0.5'
   };
   const styles4 = {
@@ -56,8 +57,9 @@ const styles = theme => ({
     // opacity:'0.5'
   };
   const styles6 = {
-    backgroundImage:'url(../static/img/bg/videobg.jpg)',
+    backgroundImage:'url(../static/img/bg/deathly.jpg)',
     backgroundSize:'cover',
+    backgroundPosition: 'center'
   };
   
 
@@ -104,6 +106,7 @@ class App extends React.Component {
                 </div>
                 <div className="section" style={styles5}>
                   {/* <About /> */}
+                  <h2 style={{ textShadow:'2px 8px 2px black',letterSpacing:'0.1em',textAlign: 'center', fontFamily: 'Harry', fontSize: '4em', color:'#FFF', position:'absolute', width:'100%',top:'20px'}}>Contact Us</h2>
                   <Footer />
                 </div>
               </ReactFullpage.Wrapper>

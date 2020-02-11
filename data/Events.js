@@ -27,7 +27,7 @@ export const Technical =
 				{
 					title: "RoopRekha",
 					pdfLink: "https://drive.google.com/open?id=1cU8b4USjTjKXTprbIQNo4_yPDKeWUnP5",
-					description: "Rooprekha is for all the creative freaks, so be ready to showcase your creative mind in the field of graphic designing. We will give you the opportunity to communicate with people through your creative art along with many exciting prizes worth Rs. 2500.",
+					description: "Rooprekha is for all the creative freaks, so be ready to showcase your creative mind in the field of graphic designing. We will give you the opportunity to communicate with people through your creative art along with many exciting prizes.",
 					coordinators: ["Akansha Bhagat : 7999973740","Prachi Sahu : 7470870202","Soumya Chandrakar : 9691045005"],
 					logo: "../static/logo/Roopreekha-OG.png",
 					background: "../static/img/rooprekha.jpg"
@@ -147,7 +147,7 @@ export const NonTechnical = [
 			mainEvents:[
 			  {
 				title: "PubG Mobile",
-				pdfLink: "https://drive.google.com/open?id=1jEcj6gjgG_9Kb44xsDTpwQsADU1yMLAq",
+				pdfLink: "https://drive.google.com/open?id=1jWMXxHL_N4BTHGCD__E1sIPGH90Zmj4V",
 				description: "PLAYERUNKNOWN’S BATTLEGROUND (PUBG) is an online multiplayer battle royale game which is developed/published by Tencent Games.You will need a internet connection to play that via mobile network or Wi-Fi but the lower the ping the better is the gameplay.Battleground is a player vs player shooter game in which upto one hundred players fight in a battle in a 8*8 km island(so called Erangel map),where players fight to remain the last alive and the last person or team left alive wins the match.",
 				coordinators: ["PRIYESH TAMRAKAR : 7000096877","RISHI THAKUR : 7223999001","PRANJAL PANDEY : 8109675139","PRIYANSH GURUNULE : 9644100144"],
 				logo: "../static/logo/Pubg-Og.png",
@@ -231,8 +231,8 @@ export const Managment = [
 			tabIcon: Dashboard,
 			mainEvents:[
 			  {
-				title: "Corporate Roadies",
-				pdfLink: "https://drive.google.com/file/d/1J5KpmKFmmHsYkpGzhnOwrHXWh-g4h-Zc/view?usp=sharing",
+				title: "Accio Magnate(Corporate Roadies)",
+				pdfLink: "https://drive.google.com/open?id=1iGCWeFEljOwY1rcaZOnRlricMGsNUa5i",
 				description: "Corporate Roadies is a collection of management trails to test your business acumen, skills, and Knowledge. The game is designed to throw the worst at you to bring out best in you. The participants need to show their caliber, the power of persuasion and the ability to handle pressure. Preparing the participants to withstand the harsh reality of the corporate world.",
 				coordinators: ["Ambuj Yadav : +91-9131475865","Palak Singh : 7869388760","Moumita Mondal : 8827263005"],
 				logo: "../static/logo/cr.png",

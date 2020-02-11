@@ -61,7 +61,7 @@ function ProductCategories(props) {
 
   return (
     <LayoutBody className={classes.root} component="section" width="large">
-      <Typography variant="h1" marked="center" align="center" component="h2" style={{textShadow:'2px 8px 2px black',letterSpacing:'0.2em',fontSize:'4em',marginTop:60,fontFamily: 'Harry',color:'white'}}>
+      <Typography variant="h1" marked="center" align="center" component="h2" style={{textShadow:'2px 8px 2px black',fontSize:'4em',marginTop:60,fontFamily: 'Harry',color:'white'}}>
         Our Team
       </Typography>
 

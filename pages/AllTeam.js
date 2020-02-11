@@ -236,8 +236,10 @@ function ProductCategories(props) {
      .body{
         background:black;
         background-color:rgba(0,0,0,0.8);
-        // background:url('../static/img/2020/2.jpg');
-        // background-size:cover;
+        background:url('../static/img/bg/team.jpg');
+        background-position:center;
+        background-attachment:fixed;
+        background-size:cover;
       }
     `}</style>
      </div>

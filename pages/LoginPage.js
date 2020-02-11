@@ -72,10 +72,11 @@ class LoginPage extends React.Component {
     return (
         <Layout st="static">
         <div style={{
-            backgroundImage: "url('../static/img/login1.jpg')",
+            backgroundImage: "url('../static/img/bg/bricks.jpg')",
             backgroundSize: 'cover',
             width:'100%',
           }}>
+            {/* <div style={{width:'50%', height:'auto',position:'absolute'}}><img src="../static/img/bg/platform.png" /></div> */}
           <div className={classes.container}>
             <GridContainer justify="center">
               <GridItem xs={11} sm={10} md={6} lg={5}>

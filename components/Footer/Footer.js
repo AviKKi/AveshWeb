@@ -51,7 +51,6 @@ function PaperSheet(props) {
 
   return (
     <div id="footer" className={classes.footer} style={{position:props.st}}>
-      <h2 style={{ textShadow:'2px 8px 2px black',letterSpacing:'0.1em',textAlign: 'center', fontFamily: 'Harry', fontSize: '4em', color:'#FFF', marginBottom: '15%'}}>Contact Us</h2>
       <Paper className={classes.root} elevation={1}>
       <Grid container
       spacing={0}
@@ -79,8 +78,8 @@ function PaperSheet(props) {
                    <Typography variant="body2" gutterBottom align="center" style={{color:"#f1f8e9",fontSize:14}}>
                       Rishabh Singh : 8517817641 <br />
                       Devesh Joshi : 7974451799 <br />
-                      Satyam Lachhwani : 9770977224<br />
-                      Akarshit Shrivastav : 9131054396  <br/><br/> 
+                      Akarshit Shrivastav : 9131054396  <br/>
+                      Satyam Lachhwani : 9770977224<br /><br/> 
                       Website Admin : 7247489270
                     </Typography>
                    {/* <img src="../static/img/google.png"  className={classes.socialIcons}/>
