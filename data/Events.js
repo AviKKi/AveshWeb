@@ -10,7 +10,7 @@ export const Technical =
 			ribbon: '../static/img/ribbon/ribbon_hashmap.png',
 			mainEvents:[
 				{
-					title: "Cybertron(Frontend)",
+					title: "Cybertron (Frontend)",
 					pdfLink: "https://drive.google.com/open?id=1gnppdNMAlVKqfU7Kp69UDeqVJYOvhLXv",
 					description: "This event is all about creating attractive web pages and the name itself describes it . In today’s age, we use internet for everything and we go through web pages that are dynamic & responsive and you have to develop and design such web page in this contest. ",
 					coordinators: ["Mahadev Ajagalla : 6268088085","Deepika Achla : 9407918900","Manikanta Sahu : 9329277143","Kavita Reddy : 8103446090"],
@@ -21,7 +21,7 @@ export const Technical =
 				{
 					title: "CodeKnack",
 					pdfLink: "https://drive.google.com/open?id=1c-C3xDQWIcw3QUNvHU73bGpLCyn4SUQO",
-					description: " “Ability is nothing without Opportunity”  This event will test your coding knack and Knowledge in most interesting and funny way. Surely challenges the coder within you. AVESH 2k19 invites all the coders to showcase their mastery in coding.",
+					description: " “Ability is nothing without Opportunity”  This event will test your coding knack and Knowledge in most interesting and funny way. Surely challenges the coder within you. AVESH 2k20 invites all the coders to showcase their mastery in coding.",
 					coordinators: [" Naveen kumar Yadav : 6267206606",,"Raj Singh Chauhan : 9926633186","Bhupesh verma : 7898657041","Vikas Burman : 7999696980",],
 					logo: "../static/logo/Codeknack.png",
 					background: "../static/img/code.jpg",

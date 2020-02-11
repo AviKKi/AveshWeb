@@ -7,25 +7,40 @@ const Article = ({ videoSrc, title, content, media, ...other }) => (
     <div className="article" style={{padding: "10px 0px", cursor: 'pointer', borderBottom: '1px solid grey'}} {...other} >
         
         <H2><u>{title}</u></H2><br />
-        {console.log(isVideo("123.mp4"))}
         {isVideo(media)?
         <video 
             muted 
             autoPlay 
             loop 
-            style={{ float: 'left', marginRight: '10px' }} 
             src={media} 
-            height="120px" 
+            className='resizeMedia'
         />:
             <img 
             src={media} 
-            height='120px' 
-            style={{ float: 'left', marginRight: '10px' }}
+            className='resizeMedia'
         />
         }
         <Cursive>
             {content}<strong style={{fontSize:'1rem', fontFamily:'Helvetica',color: ''}}>more...</strong>
         </Cursive>
+        <style>{`
+            .resizeMedia{
+                float:left;
+                margin-right:10px;
+                height:120px;
+                width:auto;
+            }
+            @media (max-width:768px){
+                .resizeMedia{
+                    width:60%;
+                }
+            }
+            @media (max-width:440px){
+                .resizeMedia{
+                    width:100%;
+                }
+            }
+        `}</style>
     </div>)
 
 export default Article

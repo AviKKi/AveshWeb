@@ -17,6 +17,12 @@ export default function Cursive(props) {
                     font-family: Satisfy;
                     font-size: 25px;
                 }
+                @media (max-width:700px){
+                    p{
+                        line-height: 1.3;
+                        font-size: 20px;
+                    }
+                }
             `}
             </style>
             <p>{props.children}</p>
