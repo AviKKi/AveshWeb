@@ -9,7 +9,7 @@ const Newspaper = ({ ribbon,articles, onClick }) => (
             <img height="150px" src={ribbon} />
         </H1>
         <div style={styles.mainContent}>
-            {articles.map(artcl => <Article {...artcl} onClick={onClick.bind(this, artcl)} content={artcl.description} />)}
+            {articles.map(artcl => <Article {...artcl} onClick={onClick.bind(this, artcl)} content={artcl.description} media={artcl.media} />)}
         </div>
     </Wrapper>
 )

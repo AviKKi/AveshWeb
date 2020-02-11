@@ -1,19 +1,30 @@
 import { H2 } from './Heading'
 import Cursive from './Cursive'
 
-const Article = ({ videoSrc, title, content, ...other }) => (
-    <div className="article" style={{padding: "10px 0px"}} {...other} >
+const isVideo = url=>(url.slice(-3) === "mp4")
+
+const Article = ({ videoSrc, title, content, media, ...other }) => (
+    <div className="article" style={{padding: "10px 0px", cursor: 'pointer', borderBottom: '1px solid grey'}} {...other} >
+        
+        <H2><u>{title}</u></H2><br />
+        {console.log(isVideo("123.mp4"))}
+        {isVideo(media)?
         <video 
             muted 
             autoPlay 
             loop 
             style={{ float: 'left', marginRight: '10px' }} 
-            src={videoSrc||"/static/videos/maze.mp4"} 
-            height="150px" 
+            src={media} 
+            height="120px" 
+        />:
+            <img 
+            src={media} 
+            height='120px' 
+            style={{ float: 'left', marginRight: '10px' }}
         />
-        <H2><u>{title}</u></H2><br />
+        }
         <Cursive>
-            {content}
+            {content}<strong style={{fontSize:'1rem', fontFamily:'Helvetica',color: ''}}>more...</strong>
         </Cursive>
     </div>)
 
