@@ -42,11 +42,11 @@ const styles = theme => ({
       width:'90%',
     },
     height: "100%",
-    borderRadius:3,
+    borderRadius:5,
   },
   media: {
-    width : 182,
-    height: 0,
+    width : 152,
+    height: 152,
     borderRadius:'50%',
   },
   head: {
@@ -64,20 +64,38 @@ const styles = theme => ({
     {
       title : 'Fest-Management',
       detail : [
+        
+      {
+        name : "Anmol Matharu",
+        profile : "",
+        pic : "../static/team/anmol.jpeg"
+      },
       {
         name : "Satyam Lachhwani",
         profile : "",
-        // pic : "../static/team/.jpg"
+        pic : "../static/team/satyam.png",
+        profile: "https://github.com/Satyam1203"
       },
       {
         name : "Naama Ali",
         profile : "",
-        // pic : "../static/team/.jpg"
+        pic : "../static/team/naama.jpg"
       },
       {
-        name : "Anmol Matharu",
+        name : "Palash Dubey",
         profile : "",
-        // pic : "../static/team/.jpg"
+        pic : "../static/team/palash.jpg"
+      },
+      {
+        name : "Alka Tiwari",
+        profile : "",
+        pic : "../static/team/alka.jpg",
+        profile: "https://github.com/alkatiwari23"
+      },
+      {
+        name : "Muskaan Agrawal",
+        profile : "",
+        pic : "../static/team/muskaan.png"
       },
       ]
   },
@@ -88,21 +106,26 @@ const styles = theme => ({
       {
         name : "Atul Yadav(AviKKi)",
         profile : "",
-        // pic : "../static/team/github.png"
+        pic : "../static/team/atul.png",
+        profile: "https://github.com/AviKKi"
       },
       {
         name : "Diksha Verma",
         profile : "",
-        // pic : "../static/team/diksha.jpg"
+        pic : "../static/team/diksha.png",
+        profile: "https://github.com/dikshaverma011"
       },
       {
         name : "Chandra Shekhar Sahu",
         profile : "",
-        // pic : "../static/team/github2.png"
+        pic : "../static/team/chandu.png",
+        profile: "https://github.com/csahu3008"
       },
       {
         name : "Arun Kumar Behra",
         profile : "",
+        pic : "../static/team/arun.jpg",
+        profile: "https://github.com/akb1985"
       }
       ]
     },
@@ -113,40 +136,26 @@ const styles = theme => ({
       {
         name : "Ashutosh Netam",
         profile : "",
-        // pic : "../static/team/ashu.jpeg"
+        pic : "../static/team/ashu.jpg"
       },
       {
         name : "Bhavesh Chandrakar",
         profile : "",
-        // pic : "../static/team/bhavesh.jpg"
+        pic : "../static/team/bhavesh.jpg"
       },
       {
         name : "Nishita Toshi",
         profile : "",
-        // pic : "../static/team/nishita.jpg"
+        pic : "../static/team/nishita.jpg"
       },
       ]
     },
-    {
-      title : 'Support',
-      detail : [
-      {
-        name : "Palash Dubey",
-        profile : "",
-        // pic : "../static/team/ashu.jpeg"
-      },
-      {
-        name : "Alka Tiwari",
-        profile : "",
-        // pic : "../static/team/bhavesh.jpg"
-      },
-      {
-        name : "Muskaan Agrawal",
-        profile : "",
-        // pic : "../static/team/nishita.jpg"
-      },
-      ]
-    },
+    // {
+    //   title : 'Support',
+    //   detail : [
+      
+    //   ]
+    // },
 
      {
       title : 'Public Relation',
@@ -154,22 +163,22 @@ const styles = theme => ({
       {
         name : "Ditiya Mukharjee",
         profile : "",
-        // pic : "../static/team/ayushi.jpg"
+        pic : "../static/team/ditiya.jpeg"
       },
       {
         name : "Gaurav Sharma",
         profile : "",
-        // pic : "../static/team/salomi.jpg"
+        pic : "../static/team/gaurav.jpeg"
       },
       {
         name : "Pragya Mishra",
         profile : "",
-        // pic : "../static/team/salomi.jpg"
+        pic : "../static/team/pragya.jpeg"
       },
       {
         name : "Ashish Kumar",
         profile : "",
-        // pic : "../static/team/salomi.jpg"
+        pic : "../static/team/ashish.jpeg"
       },
       ]
     },
@@ -204,21 +213,23 @@ function ProductCategories(props) {
       >
       {team["detail"].map(t => (
       <GridItem xs={11} md={4} lg={4} align='center'>
+        {/* <Link href={t.profile}> */}
           <Card className={classes.card}>
             <CardActionArea>
-              {/* <CardMedia
+              <CardMedia
                 className={classes.media}
                 image={t.pic}
-              /> */}
+              />
               <CardContent>
-                {/* <Link href={t.profile}> */}
+                <Link href={t.profile}>
                 <Typography variant="button" component="h2" align="center" >
                   <b> <hr style={{width:'70%'}}/>{t.name}</b>
                 </Typography>
-                {/* </Link> */}
+                </Link>
               </CardContent>
             </CardActionArea>
             </Card>
+          {/* </Link> */}
       </GridItem>
       ))}
 
@@ -238,13 +249,16 @@ function ProductCategories(props) {
         background-color:rgba(0,0,0,0.8);
         background-image:url('http://getwallpapers.com/wallpaper/full/d/f/5/17391.jpg');
         background-position:center;
-        background-size:"auto 100%";
+        background-size:"cover";
+        background-repeat:"no-repeat";
         background-attachment:fixed;
         
       }
       @media (max-width:568px){
         .body{
-          background: rgba(194,187,196,0.8);
+          background-image: linear-gradient(-45deg, rgba(194,187,196,0.8), #333);
+          background-attachment:fixed;
+          // background: rgba(194,187,196,0.8);
           // background: rgba(243,226,199,1);
         }
       }

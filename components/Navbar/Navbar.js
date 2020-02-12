@@ -58,13 +58,13 @@ const navLinks = {
       move:'3'
     },
     {
-      link: '/#faq',
+      link: '/#Faq',
       label: 'FAQ',
       show: 'always',
       move:'4'
     },
     {
-      link: '/#footer',
+      link: '/#Footer',
       label: 'Contact Us',
       show: 'always',
       move:'5'
