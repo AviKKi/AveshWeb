@@ -48,7 +48,7 @@ export const Technical =
 				ribbon: '../static/img/ribbon/ribbon_robotics.png',
 				mainEvents:[{
 					title: "Robo Drift",
-					pdfLink: "https://drive.google.com/open?id=1xGlLq17ZwBCvLgFZMjeSxUWmqyT0bT6M",
+					pdfLink: "https://drive.google.com/open?id=153oAhsfi-GuXkILzjzcAgYeKhJah1qqQ",
 					description: "It is a robotics competition in which team has to make there robo on the track, consisting various hurdles and different track conditions. The teams have to clear the track in minimal time as possible to win the drift.",
 					coordinators: [" Siddharth Deshmukh : 7771839181","Yogesh Kumar Chandrawanshi : +91-7694833236"],
 					logo: "../static/logo/robo-drift.png",
@@ -66,7 +66,7 @@ export const Technical =
 				},
 				{
 					title: "Robo Soccer",
-					pdfLink: "https://drive.google.com/open?id=10hzo8ge1WzXPpyPQP_1mYC6qEd_x_Arn",
+					pdfLink: "https://drive.google.com/open?id=1wO1WAe-2KNvipz0o9l7yhVY0YXrlgtTZ",
 					description: "It is a robotics event in which the opponents have to strike goal in their opponent goal post by dribbling the ball through their bots. The team which strikes the maximum goal wins the match. Soccer, To fight, run, tackle, defend, attack, score, and celebrate!",
 					coordinators: ["Ambati Laxman Rao : +91-9131892340","Devendra Singh Paikara : 7772966313"],
 					logo: "../static/logo/Soccer.png",
