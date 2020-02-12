@@ -296,16 +296,15 @@ class PaymentOptions extends React.Component {
                     <Grid item xs={12} lg={10}>
                         <PassStatusCard pass={pass} coupons={coupons} />
                     </Grid>
+                    <Grid item xs={12} lg={5} >
+                        <PassesBuyCard onPay={onPay} />
+                    </Grid>
                     <Grid item xs={12} lg={5}>
                         <CodeEntryCard
                             couponClick={this.couponClick}
                             couponCode={this.couponCode}
                             changeHandler={this.changeHandler}
                         />
-                    </Grid>
-                    <Grid item xs={12} lg={5} >
-                        <PassesBuyCard onPay={onPay} />
-
                     </Grid>
                 </Grid >)}
 
