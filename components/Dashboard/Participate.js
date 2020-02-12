@@ -65,7 +65,7 @@ class Participate extends React.Component {
         const { events } = this.state
         return (
             <>
-                <h3 style={{ color: "white" }}>
+                <h3 style={{ color: "white", backgroundColor:"rgba(0,0,0,0.5)", textAlign:'center' }}>
                     Let us know what events are you participating in.
                 </h3>
 
