@@ -15,7 +15,7 @@ const AccomodationNotice = () => {
                                 Contact for Accomodation
                                 </Typography>
                             <Typography secondary component="p">
-                                Get accomodation in GEC Hostels, contact no.
+                                We'll try to provide accomodation in GEC's Hostel for participants from distant locations, contact no. Alka Tiwari 8839055202 for details
                                 </Typography>
                         </CardContent>
                     </Card>
