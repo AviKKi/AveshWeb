@@ -1,0 +1,107 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.schnatz {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+}
+
+.schnatz .kugel {
+  width: 3vw;
+  height: 3vw;
+  background-color: gold;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.schnatz .wing {
+  position: absolute;
+  width: 6vw;
+  height: 1.5vw;
+  border-radius: 20px;
+  background-color: gold;
+  top: -2vw;
+}
+
+.schnatz .wing:after {
+  position: absolute;
+  display: block;
+  content: "";
+  position: absolute;
+  width: 4vw;
+  height: 1.5vw;
+  top: 1vw;
+  background-color: gold;
+  border-radius: 20px;
+}
+
+.schnatz .wing.wing--left {
+  left: -6vw;
+  -webkit-transform-origin: right bottom;
+          transform-origin: right bottom;
+  -webkit-animation: wing--left 1s infinite alternate;
+          animation: wing--left 1s infinite alternate;
+}
+
+@-webkit-keyframes wing--left {
+  from {
+    -webkit-transform: rotate(30deg);
+            transform: rotate(30deg);
+  }
+  to {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@keyframes wing--left {
+  from {
+    -webkit-transform: rotate(30deg);
+            transform: rotate(30deg);
+  }
+  to {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+.schnatz .wing.wing--left:after {
+  left: 2vw;
+}
+
+.schnatz .wing.wing--right {
+  left: 3vw;
+  -webkit-transform-origin: left bottom;
+          transform-origin: left bottom;
+  -webkit-animation: wing--right 1s infinite alternate;
+          animation: wing--right 1s infinite alternate;
+}
+
+@-webkit-keyframes wing--right {
+  from {
+    -webkit-transform: rotate(-30deg);
+            transform: rotate(-30deg);
+  }
+  to {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@keyframes wing--right {
+  from {
+    -webkit-transform: rotate(-30deg);
+            transform: rotate(-30deg);
+  }
+  to {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+/*# sourceMappingURL=style.css.map */

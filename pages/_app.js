@@ -41,7 +41,7 @@ class MyApp extends App {
       <Container>
         <Provider store={reduxStore}>
         <Head>
-          <title>Avesh 3.0</title>
+          <title>Avesh: Chapter 4</title>
           <link rel="stylesheet" type="text/css" href="static/css/parent.css"/>
         </Head>
         {/* Wrap every page in Jss and Theme providers */}

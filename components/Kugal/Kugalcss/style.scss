@@ -1,0 +1,63 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+@mixin pseudo{
+  position: absolute;
+  display: block;
+  content:"";
+}
+
+.schnatz{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transition-timing-function:ease-in-out;
+    .kugel{
+      width:3vw;
+      height:3vw;
+      background-color: goldenred;
+      border-radius:50%;
+      position: absolute;
+    }
+    .wing{
+      position: absolute;
+      width:6vw;
+      height:1.5vw;
+      border-radius:20px;
+      background-color: silver;
+      top:-2vw;
+      &:after{
+        @include pseudo;
+        position: absolute;
+        width:4vw;
+        height:1.5vw;
+        top:1vw;
+        background-color: silver;
+        border-radius:20px;
+        
+      }
+      &.wing--left{
+        left:-6vw;
+        transform-origin:right bottom;
+        animation:wing--left 1s infinite alternate;
+        @keyframes wing--left{
+          from{transform:rotate(30deg)}
+          to{transform:rotate(0deg)}
+        }
+        &:after{
+          left:2vw;
+        }
+      }
+      &.wing--right{
+        left:3vw;
+        transform-origin:left bottom;
+        animation:wing--right 1s infinite alternate;
+        @keyframes wing--right{
+          from{transform:rotate(-30deg)}
+          to{transform:rotate(0deg)}
+        }
+      }
+    }
+  }
+  
