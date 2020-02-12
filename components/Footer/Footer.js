@@ -58,12 +58,14 @@ function PaperSheet(props) {
       justify="center"
       alignItems="center"
       >
-      <Grid item xs={5} lg={3}>
+      <Grid item xs={10} lg={6}>
         <Typography variant="button" gutterBottom align="center" style={{color:"#f1f8e9",fontSize:14}}>
          <strong> Follow us on </strong>
          <br/>
                   <a href="https://www.facebook.com/aveshngecr"><img src="../static/img/fb.png" className={classes.socialIcons}/></a>
                   <a href="https://www.instagram.com/aveshgecr/"><img src="../static/img/insta.png"  className={classes.socialIcons}/></a>
+                  <a href="https://www.youtube.com/channel/UCGVK_ynjVO-E0fZtWHUIVDg/"><img src="../static/img/yt.png"  className={classes.socialIcons}/></a>
+                  <a href="https://twitter.com/aveshgecr"><img src="../static/img/twitter.png"  className={classes.socialIcons}/></a>
                 {/*  <img src="../static/img/google.png"  className={classes.socialIcons}/>
                   <img src="../static/img/yt.png"  className={classes.socialIcons}/>
                   <img src="../static/img/marker.png"  className={classes.socialIcons}/>
