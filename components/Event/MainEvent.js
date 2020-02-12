@@ -82,13 +82,13 @@ class FullWidthTabs extends React.Component {
                 </Grid>
               </Grid>
 
-              <Typography variant="h4" marked="center" align="center" component="h2" className={classes.eventTitle}>
+              <Typography variant="h4" marked="center" align="center" component="h2" className={classes.eventTitle} style={{fontFamily: 'Harry'}}>
                 {event.title}
               </Typography>
 
                   <hr className={classes.hr}/>
 
-                <Typography variant="h6" className={classes.description}>
+                <Typography variant="h6" className={classes.description} style={{fontFamily: 'Satisfy'}}>
 
                 {event.description}
 
@@ -96,7 +96,7 @@ class FullWidthTabs extends React.Component {
                 <hr className={classes.hr}/>
 
                   <Typography variant="h4" align="center">
-                           <Button onClick={this.downloadPdf} variant="outlined" color="secondary" className={classes.pdf}>
+                           <Button onClick={this.downloadPdf} variant="outlined" className={classes.pdf}>
                               <b> Download PDF </b>
                            </Button>
                     </Typography>
@@ -119,6 +119,16 @@ class FullWidthTabs extends React.Component {
 
             </Grid> {/*closing GridItem*/}
         </Grid>
+        <style>{`
+          @font-face{
+            font-family: Harry;
+            src: url('../../static/font/HARRYP__.TTF');
+          }
+          @font-face{
+            font-family: Satisfy;
+            src: local('Satisfy Regular'), local('Satisfy-Regular'), url(https://fonts.gstatic.com/s/satisfy/v10/rP2Hp2yn6lkG50LoCZOIHQ.woff2) format('woff2');
+          }
+        `}</style>
       </div>
     );
   }

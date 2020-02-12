@@ -73,7 +73,7 @@ class NavPills extends React.Component {
                 root: pillsClasses,
                 labelContainer: classes.labelContainer,
                 label: classes.label,
-                selected: classes[color]
+                selected: classes.tabColor
               }}
             />
           );

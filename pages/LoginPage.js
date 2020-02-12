@@ -72,10 +72,16 @@ class LoginPage extends React.Component {
     return (
         <Layout st="static">
         <div style={{
-            backgroundImage: "url('../static/img/login1.jpg')",
+            backgroundImage: "url('../static/img/bg/bricks.jpg')",
             backgroundSize: 'cover',
             width:'100%',
           }}>
+            <div 
+            // style={{width:'80%',margin:'auto'}}
+            className='platformImg'
+            >
+              <img src="../static/img/bg/platform.png" width="100%" style={{opacity:0.8}}/>
+            </div>
           <div className={classes.container}>
             <GridContainer justify="center">
               <GridItem xs={11} sm={10} md={6} lg={5}>
@@ -139,6 +145,27 @@ class LoginPage extends React.Component {
           </div>
           {/*<Footer whiteFont />*/}
         </div>
+        <style>{`
+          .platformImg{
+            width:25%;
+            margin:auto;
+          }
+          @media (max-width:984px){
+            .platformImg{
+              width:40%;
+            }
+          }
+          @media (max-width:768px){
+            .platformImg{
+              width:60%;
+            }
+          }
+          @media (max-width:568px){
+            .platformImg{
+              width:80%;
+            }
+          }
+        `}</style>
       </Layout>
     );
   }

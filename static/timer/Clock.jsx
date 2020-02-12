@@ -54,6 +54,13 @@ class Clock extends Component{
 
         // console.log('seconds',seconds,'minutes',minutes,'hours',hours,'days',days);
         this.setState({days, hours, minutes, seconds});
+        if(this.state.seconds+this.state.minutes+this.state.hours+this.state.days === 0){
+            this.setState.seconds=0;
+            this.setState.minutes=0;
+            this.setState.hours=0;
+            this.setState.days=0;
+            
+        }
     }
 
     render(){

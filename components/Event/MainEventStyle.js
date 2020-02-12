@@ -47,11 +47,11 @@ const MainEventStyle = theme => ({
     color:'#ffffff',
     textAlign:'justify',
     margin:'4vh',
-    fontSize:'16px',
+    fontSize:'20px',
     textAlign: "center",
     [theme.breakpoints.down("sm")]: {
       paddingTop:'3vh',
-      fontSize:'14px',
+      fontSize:'16px',
       margin:0,
     }
   },
@@ -82,6 +82,8 @@ const MainEventStyle = theme => ({
     textAlign:'center',
     fontSize:'14px',
     marginTop:'5vh',
+    border: '1px solid #A77440',
+    borderRadius: '10px',
     [theme.breakpoints.down("sm")]: {
       marginTop:'7vh',
       fontSize:'12px',

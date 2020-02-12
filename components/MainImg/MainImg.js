@@ -1,5 +1,6 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core';
+import Kugal from '../Kugal/Kugal/Kugal';
 
 const styles = theme => ({
     root:{
@@ -68,6 +69,7 @@ function MainImg(props){
     return (
         <>
             <div className={classes.root}>
+                <Kugal />
                 <h3 className={classes.heading}>Government Engineering College, Raipur</h3>
                 <h2>Presents</h2>
                 <div className={classes.name}>

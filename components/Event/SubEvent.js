@@ -110,9 +110,8 @@ function DetailsDrawer(props) {
         }}>
         <Fab
           size="small"
-          color="secondary"
           onClick={props.closeHandler}
-          style={{ padding: 0 }}>
+          style={{ padding: 0 ,backgroundColor:'#A77440'}}>
           <Close style={{ color: "#FFFFFF" }} />
         </Fab>
       </div>
@@ -149,6 +148,7 @@ class Events extends React.Component {
         <div className={classes.images}>
           <Newspaper
             onClick={this.toggleDetails}
+            ribbon={subEvents.ribbon}
             articles={subEvents["mainEvents"]} />
         </div>
       </>

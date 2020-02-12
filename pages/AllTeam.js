@@ -66,12 +66,12 @@ const styles = theme => ({
       detail : [
       {
         name : "Satyam Lachhwani",
-        profile : "www.google.com",
+        profile : "",
         // pic : "../static/team/.jpg"
       },
       {
         name : "Naama Ali",
-        profile : "www.unsplash.com",
+        profile : "",
         // pic : "../static/team/.jpg"
       },
       {
@@ -211,11 +211,11 @@ function ProductCategories(props) {
                 image={t.pic}
               /> */}
               <CardContent>
-                <Link href={t.profile}>
+                {/* <Link href={t.profile}> */}
                 <Typography variant="button" component="h2" align="center" >
                   <b> <hr style={{width:'70%'}}/>{t.name}</b>
                 </Typography>
-                </Link>
+                {/* </Link> */}
               </CardContent>
             </CardActionArea>
             </Card>
@@ -236,8 +236,17 @@ function ProductCategories(props) {
      .body{
         background:black;
         background-color:rgba(0,0,0,0.8);
-        // background:url('../static/img/2020/2.jpg');
-        // background-size:cover;
+        background-image:url('http://getwallpapers.com/wallpaper/full/d/f/5/17391.jpg');
+        background-position:center;
+        background-size:"auto 100%";
+        background-attachment:fixed;
+        
+      }
+      @media (max-width:568px){
+        .body{
+          background: rgba(194,187,196,0.8);
+          // background: rgba(243,226,199,1);
+        }
       }
     `}</style>
      </div>

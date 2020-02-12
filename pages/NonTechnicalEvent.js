@@ -38,15 +38,37 @@ class SectionPills extends React.Component {
     } )
     return (<>
       <Navbar st='static' />
-      <div className={classes.section} style={{width:'full'}}>
-        <div className={classes.container}>
+        <div className={classes.section} style={{padding:'10px 0'}}>
+        <div className={classes.container} className='responsiveWindow'>
                 <NavPills
                   color="success"
                   tabs={tabs}
                 />
         </div>
       </div>
-      <Footer st="static"/></>
+      <Footer st="static"/>
+      
+      <style>
+          {`
+            .responsiveWindow{
+              width:75%;
+              padding-left:0;
+              padding-right:0;
+              margin:auto;
+            }
+            @media (max-width:768px){
+              .responsiveWindow{
+                width:80%;
+              }
+            }
+            @media (max-width:576px){
+              .responsiveWindow{
+                width:98%;
+              }
+            }
+          `}
+        </style>
+      </>
     );
   }
 }

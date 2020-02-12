@@ -3,14 +3,32 @@ import Wrapper from './Wrapper'
 import { H1 } from './Heading'
 import Article from './Article'
 
-const Newspaper = ({ articles, onClick }) => (
+const Newspaper = ({ ribbon,articles, onClick }) => (
     <Wrapper style={styles.wrapper}>
         <H1 style={styles.heading}>
-            <img height="150px" src="../static/img/ribbon_robotics.png" />
+            <img src={ribbon} className='resizeImg'/>
         </H1>
         <div style={styles.mainContent}>
-            {articles.map(artcl => <Article {...artcl} onClick={onClick.bind(this, artcl)} content={artcl.description} />)}
+            {articles.map(artcl => <Article {...artcl} onClick={onClick.bind(this, artcl)} content={artcl.description} media={artcl.media} />)}
         </div>
+        <style jsx>{`
+            .resizeImg{
+                height:150px;
+                width:auto;
+            }
+            @media (max-width:1096px){
+                .resizeImg{
+                    width:75%;
+                    height:auto;
+                }
+            }
+            @media (max-width:768px){
+                .resizeImg{
+                    width:90%;
+                    height:auto;
+                }
+            }
+        `}</style>
     </Wrapper>
 )
 
