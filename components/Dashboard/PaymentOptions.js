@@ -46,6 +46,27 @@ const Option = withStyles(styles)((props) => {
     )
 })
 
+const PassStatusCard = withStyles(styles)(props => {
+    const { pass, coupons, classes } = props
+    return (
+        <Card className={classes.card}>
+            <CardContent>
+                <Tooltip title="Buy a passes and apply it's code" >
+                    <Typography gutterBottom variant="h5" component="h2">
+                        Your Pass
+                    </Typography>
+                </Tooltip>
+                <p>{pass ? pass : "You don't have a pass yet"}</p><br />
+                {
+                    coupons.map(
+                        el => <p>{el}</p>
+                    )
+                }
+            </CardContent>
+        </Card>
+    )
+})
+
 const CodeEntryCard = withStyles(styles)((props) => {
     const { couponCode, changeHandler, classes, couponClick } = props
     return (
@@ -145,14 +166,14 @@ const PassesBuyCard = withStyles(styles)(props => {
 })
 
 
-const makePayment =  async (payload, token, dispatch) => {
+const makePayment = async (payload, token, dispatch) => {
 
     const requestParams = {
         headers: {
             'Authorization': `Token ${token}`
         }
     }
-    const res = await axios.post('/paytm/payment', {payload}, requestParams)
+    const res = await axios.post('/paytm/payment', { payload }, requestParams)
     if (res.data.success !== undefined) {
         dispatch({ type: POP_SNACKBAR, payload: { snackbarMessage: res.data.reason } })
         return
@@ -182,6 +203,8 @@ class PaymentOptions extends React.Component {
         spinner: true,
         passflag: false,
         accomodationflag: false,
+        pass: false,
+        coupons: [],
         squadpass: "",
         couponCode: ""
     }
@@ -202,7 +225,9 @@ class PaymentOptions extends React.Component {
             console.log(res.data)
             console.log(res.data.success)
             if (res.data.success)
-                this.setState({ passflag: true })
+                // this.setState({ passflag: true })
+                // Router.push('/UserDashboard')
+                window.location.reload()
             else {
                 dispatch({ type: POP_SNACKBAR, payload: { snackbarMessage: res.data.reason } })
             }
@@ -223,13 +248,28 @@ class PaymentOptions extends React.Component {
         let squadpass = ""
         try {
             const res = await axios.get('https://api.aveshgecr.in/users/passes', reqHeaders)
+            const passNameMapping = { "all": "All Event", "all+": "All Event + Gaming", "gaming": "Only Gaming" }
+
             for (let i in res.data) {
-                console.log(Object.entries(res.data[i]))
-                for (let j in Object.entries(res.data[i])) {
-                    let d = Object.entries(res.data[i])
-                    if (d[j][1] === "pass" || d[j][1] === "squadpass") passflag = true
-                    else if (d[j][1] === "accomm" || d[j][1] === "accomf") accomodationflag = true
-                    if (d[j][1] === "squadpass") squadpass = res.data[i].squadcode
+                i=res.data[i]
+                if (i.applied_coupon !== undefined) {
+                    if (i.applied_coupon === false) {
+                        this.setState({ pass: false })
+                    }
+                    else {
+                        // TOdo
+                        this.setState({pass: `You have a ${passNameMapping[i.coupon_type]} Pass`})
+                    }
+                }
+                else {
+                    const coupons = this.state.coupons
+                    for (let [name, v ] of Object.entries(i)) {
+                        if (name === "all" || name === "all+" || name === "gaming")
+                            coupons.push(`Code for ${v.amount} ${passNameMapping[name]} pass is ${v.code}`)
+                    }
+                    this.setState({ coupons })
+                    console.log(i)
+                    console.log(coupons)
                 }
             }
         } catch (e) { }
@@ -246,13 +286,16 @@ class PaymentOptions extends React.Component {
 
     render() {
         const { profile, token, dispatch } = this.props
-        const { passflag, accomodationflag, squadpass, spinner } = this.state
+        const { passflag, accomodationflag, squadpass, spinner, pass, coupons } = this.state
         const onPay = this._onPay(token, dispatch)
         return (
             <div style={{ overflow: "hidden" }}>
                 {spinner ? <>Loading...</> : undefined}
                 <PassesDetail passflag={passflag} accomodationflag={accomodationflag} squadpass={squadpass} />
                 {(spinner || passflag === true) ? <></> : (<Grid justify="center" container spacing={8}>
+                    <Grid item xs={12} lg={10}>
+                        <PassStatusCard pass={pass} coupons={coupons} />
+                    </Grid>
                     <Grid item xs={12} lg={5}>
                         <CodeEntryCard
                             couponClick={this.couponClick}
