@@ -145,19 +145,20 @@ const PassesBuyCard = withStyles(styles)(props => {
 })
 
 
-const makePayment = payload => async (token, dispatch) => {
+const makePayment =  async (payload, token, dispatch) => {
 
     const requestParams = {
         headers: {
             'Authorization': `Token ${token}`
         }
     }
-    const res = await axios.post('/paytm/payment', payload, requestParams)
+    const res = await axios.post('/paytm/payment', {payload}, requestParams)
     if (res.data.success !== undefined) {
         dispatch({ type: POP_SNACKBAR, payload: { snackbarMessage: res.data.reason } })
         return
     }
     let paramList = []
+    console.log(res.data)
     for (let [key, value] of Object.entries(res.data)) {
         paramList.push({ name: key, value: value })
     }
@@ -237,7 +238,11 @@ class PaymentOptions extends React.Component {
             this.setState({ passflag, accomodationflag, squadpass })
         }
     }
-    _onPay = (token, dispatch) => payload => async () => await makePayment(payload, token, dispatch)
+    // => async ()
+    _onPay = (token, dispatch) => payload => async () => {
+        console.log(payload, token, dispatch)
+        await makePayment(payload, token, dispatch)
+    }
 
     render() {
         const { profile, token, dispatch } = this.props
@@ -257,7 +262,7 @@ class PaymentOptions extends React.Component {
                     </Grid>
                     <Grid item xs={12} lg={5} >
                         <PassesBuyCard onPay={onPay} />
-                        
+
                     </Grid>
                 </Grid >)}
 
