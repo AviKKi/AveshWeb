@@ -122,7 +122,7 @@ function ProductCategories(props) {
   ];
 
   return (
-  <div id="Events">
+  <div>
     <LayoutBody className={classes.root} component="section" width="large">
       {/* <Typography variant="h4" marked="center" align="center" component="h2"  style={{ textShadow:'2px 8px 2px black',letterSpacing:'0.2em',textAlign: 'center', fontFamily: 'Harry', fontSize: '4em', color:'#FFF'}}> */}
         <h2 style={{ textShadow:'2px 8px 2px black',letterSpacing:'0.1em',textAlign: 'center', fontFamily: 'Harry', fontSize: '4em', color:'#FFF',margin:'0'}}>Events</h2>

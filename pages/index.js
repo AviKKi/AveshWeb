@@ -95,16 +95,16 @@ class App extends React.Component {
                 <div className="section" style={styles2}>
                   <Calender />
                 </div>
-                <div className="section" style={styles3}>
+                <div className="section" style={styles3} id="Events">
                   <Events/>
                 </div>
                 <div className="section" style={styles6}>
                   <Video />
                 </div>
-                <div className="section" style={styles4}>
+                <div className="section" style={styles4} id="Faq">
                   <Faq/>
                 </div>
-                <div className="section" style={styles5}>
+                <div className="section" style={styles5} id="Footer">
                   {/* <About /> */}
                   <h2 style={{ textShadow:'2px 8px 2px black',letterSpacing:'0.1em',textAlign: 'center', fontFamily: 'Harry', fontSize: '4em', color:'#FFF', position:'absolute', width:'100%',top:'20px'}}>Contact Us</h2>
                   <Footer />

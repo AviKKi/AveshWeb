@@ -152,12 +152,12 @@ const styles = theme => ({
       title : 'Public Relation',
       detail : [
       {
-        name : "Ditya Mukharjee",
+        name : "Ditiya Mukharjee",
         profile : "",
         // pic : "../static/team/ayushi.jpg"
       },
       {
-        name : "Gaurav",
+        name : "Gaurav Sharma",
         profile : "",
         // pic : "../static/team/salomi.jpg"
       },
