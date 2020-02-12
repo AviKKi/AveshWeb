@@ -45,6 +45,38 @@ const Option = withStyles(styles)((props) => {
         </Card>
     )
 })
+const InstructionCard = withStyles(styles)(props => {
+    const { classes } = props
+    return (
+        <Card className={classes.card}>
+            <CardContent>
+                <Typography gutterBottom variant="h5" component="h2">
+                    Instructions For Payment
+                    </Typography>
+                <p>
+                    There are 3 type of passes for the event-
+                        <ol>
+                        <li>All Event Pass</li>
+                        <li>All Event + Gaming Pass (excluding pubg)</li>
+                        <li>Only Gaming Pass (excluding pubg)</li>
+                    </ol>
+                </p>
+                <p>
+                    Steps to buy passes for the event -
+                    <ol>
+                        <li>From below section, select number of passes of each kind you want and click pay</li>
+                        <li>You'll be redirected to payment gateway, make your payment there</li>
+                        <li>You'll now be given codes for the passes, apply it to get a pass</li>
+                        <li>If you paid for multiple passes, ask your friends to register and then use these codes to get passes.</li>
+                    </ol>
+                </p>
+                <p>
+                </p>
+            </CardContent>
+        </Card>
+    )
+})
+
 
 const PassStatusCard = withStyles(styles)(props => {
     const { pass, coupons, classes } = props
@@ -251,19 +283,19 @@ class PaymentOptions extends React.Component {
             const passNameMapping = { "all": "All Event", "all+": "All Event + Gaming", "gaming": "Only Gaming" }
 
             for (let i in res.data) {
-                i=res.data[i]
+                i = res.data[i]
                 if (i.applied_coupon !== undefined) {
                     if (i.applied_coupon === false) {
                         this.setState({ pass: false })
                     }
                     else {
                         // TOdo
-                        this.setState({pass: `You have a ${passNameMapping[i.coupon_type]} Pass`})
+                        this.setState({ pass: `You have a ${passNameMapping[i.coupon_type]} Pass` })
                     }
                 }
                 else {
                     const coupons = this.state.coupons
-                    for (let [name, v ] of Object.entries(i)) {
+                    for (let [name, v] of Object.entries(i)) {
                         if (name === "all" || name === "all+" || name === "gaming")
                             coupons.push(`Code for ${v.amount} ${passNameMapping[name]} pass is ${v.code}`)
                     }
@@ -294,7 +326,13 @@ class PaymentOptions extends React.Component {
                 <PassesDetail passflag={passflag} accomodationflag={accomodationflag} squadpass={squadpass} />
                 {(spinner || passflag === true) ? <></> : (<Grid justify="center" container spacing={8}>
                     <Grid item xs={12} lg={10}>
+                        <InstructionCard pass={pass} coupons={coupons} />
+                    </Grid>
+                    <Grid item xs={12} lg={10}>
                         <PassStatusCard pass={pass} coupons={coupons} />
+                    </Grid>
+                    <Grid item xs={12} lg={5} >
+                        <PassesBuyCard onPay={onPay} />
                     </Grid>
                     <Grid item xs={12} lg={5}>
                         <CodeEntryCard
@@ -302,10 +340,6 @@ class PaymentOptions extends React.Component {
                             couponCode={this.couponCode}
                             changeHandler={this.changeHandler}
                         />
-                    </Grid>
-                    <Grid item xs={12} lg={5} >
-                        <PassesBuyCard onPay={onPay} />
-
                     </Grid>
                 </Grid >)}
 
