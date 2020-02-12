@@ -50,8 +50,8 @@ const styles = theme => ({
     // borderShadow:0 2 0 10 'red'  
   },
   media: {
-    width : 122,
-    height: 120,
+    width : 142,
+    height: 140,
     borderRadius:'50%',
   },
  });

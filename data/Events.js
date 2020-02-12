@@ -48,7 +48,7 @@ export const Technical =
 				ribbon: '../static/img/ribbon/ribbon_robotics.png',
 				mainEvents:[{
 					title: "Robo Drift",
-					pdfLink: "https://drive.google.com/open?id=1xGlLq17ZwBCvLgFZMjeSxUWmqyT0bT6M",
+					pdfLink: "https://drive.google.com/open?id=153oAhsfi-GuXkILzjzcAgYeKhJah1qqQ",
 					description: "It is a robotics competition in which team has to make there robo on the track, consisting various hurdles and different track conditions. The teams have to clear the track in minimal time as possible to win the drift.",
 					coordinators: [" Siddharth Deshmukh : 7771839181","Yogesh Kumar Chandrawanshi : +91-7694833236"],
 					logo: "../static/logo/robo-drift.png",
@@ -66,7 +66,7 @@ export const Technical =
 				},
 				{
 					title: "Robo Soccer",
-					pdfLink: "https://drive.google.com/open?id=10hzo8ge1WzXPpyPQP_1mYC6qEd_x_Arn",
+					pdfLink: "https://drive.google.com/open?id=1wO1WAe-2KNvipz0o9l7yhVY0YXrlgtTZ",
 					description: "It is a robotics event in which the opponents have to strike goal in their opponent goal post by dribbling the ball through their bots. The team which strikes the maximum goal wins the match. Soccer, To fight, run, tackle, defend, attack, score, and celebrate!",
 					coordinators: ["Ambati Laxman Rao : +91-9131892340","Devendra Singh Paikara : 7772966313"],
 					logo: "../static/logo/Soccer.png",
@@ -98,15 +98,15 @@ export const Technical =
 			// 	},]
 			// },
 			{
-			tabButton: "Pranoda",
+			tabButton: "Pranod",
 			tabIcon: AirplanemodeActiveIcon,
 			ribbon: '../static/img/ribbon/ribbon_pranod.png',
 			mainEvents:[
 				{
-					title: "Pranoda",
+					title: "Pranod",
 					pdfLink: "https://drive.google.com/open?id=1xKIAxZgIh6f1OrZ00u4kXTTZZY9G9Vn0",
 					description: "In this event, Participants has to construct a rocket with a 2 ltrs. Soda bottle or less and show their skills in fluid dynamics, aeronautics, projectile motion. The performance of the rocket will be tested on the basis of its power and accuracy. Event will be organised in two stages one will test the range of the rocket and second will test the projectile accuracy. ",
-					coordinators: ["Sanskar Shukla : 6263657272","Aqsham Khan : 8109832648"],
+					coordinators: ["Sanskar Shukla : 6263657272","Aqsam Khan : 8109832648"],
 					logo: "../static/logo/Pranoda-og.png",
 					background: "../static/img/pranoda.jpg",
 					media: "../static/img/media/pranoda.jpg"
@@ -132,8 +132,8 @@ export const Technical =
 				mainEvents:[
 				  {
 					title: "Setu",
-					pdfLink: "https://drive.google.com/open?id=1Fxhg3mCWY0r2eKnMpJrPPnrxvsIGzZjS",
-					description: "Walking on a bridge, this is highly likely for a civil engineer to wonder, about its construction, to get curious about its strength and design, to be eager to predict it's durability. In this event participants will have to build a truss bridge using the materials provided. Thinking at an elementary level grab this opportunity to make the structure that would stand firm on strong base of your structural Knowledge.",
+					pdfLink: "https://drive.google.com/open?id=1ybJAuUdFPBAAimHiFKKKtLzRmhDHRgxz",
+					description: "Setu is the most outstanding and astonishing event of Avesh. The event is open for all those who have an unexplained passion for building structures. This mega event is an overnight on-the-spot event for designing and building a structure with the raw materials provided. The event basically calls for teamwork, spontaneity and judicial use of raw materials provided.",
 					coordinators: ["Siddhant : 7587124200","Himanshu : 6265182065 "],
 					logo: "../static/logo/setu.png",
 					background: "../static/img/bridge.jpg",
@@ -150,11 +150,11 @@ export const Technical =
 				},
 				{
 					title: "Claynum",
-					pdfLink: "https://drive.google.com/open?id=1TzgfBoFcqZ5puK2S55kuL46beunANB0Z",
-					description: "Loved shaping sand into structures by a beach-side? CLAYNUM is the competitionto explore the horizon of your imagination, by conceptualizing, designing and eventually reaching to the finals for creating an outstanding model !!",
+					pdfLink: "https://drive.google.com/open?id=1sGRe9LBnSsVEoTuAR3uVCHuUvKrzMAuD",
+					description: "Walking on a bridge, this is highly likely for a civil engineer to wonder about its construction, to get curious about its strength and design, to be eager to predict its durability. CLAYNUM is an on the spot event to be conducted in AVESH. In this event, the participants will have to build an arch bridge using the materials provided. Thinking at an elementary level, grab the opportunity to make a structure that would stand firm on the strong base of your structural knowledge.",
 					coordinators: ["Ashish Kumar : 8878882556"," Yerushalam : 6266733645"],
-					logo: "../static/logo/Claynum.png",
-					background: "../static/img/dam.jpg",
+					logo: "../static/logo/bridge.png",
+					background: "../static/img/claynum.jpg",
 					media: "../static/img/media/claynum.jpg"
 				},]
 			},
@@ -221,7 +221,7 @@ export const NonTechnical = [
 		},
 
 		{
-			tabButton: "Other Events",
+			tabButton: "Quiz",
 			tabIcon: WbIncandescentIcon,
 			ribbon: '../static/img/ribbon/ribbon_pariksh.png',
 			mainEvents:[
@@ -245,7 +245,7 @@ export const NonTechnical = [
 				title: "Pariksh",
 				pdfLink: "https://drive.google.com/open?id=1R9o08jhWnxbeQjhIXGdgpdvu29IvQulR",
 				description: "It's a Quiz competition. The event contain questions regarding technical, management and a little general knowledge & current issues. Come and test your knowledge and win exicting prizes.",
-				coordinators: ["Harshit Kesari : 9399264043","Kriti Shrivastava : 9575339737"],
+				coordinators: ["Harshit Keshri : 9399264043","Kriti Shrivastava : 9575339737"],
 				logo: "../static/logo/Pariksh-og.png",
 				background: "../static/img/quiz.jpg",
 				media: "../static/img/media/pariksh.jpg"

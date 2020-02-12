@@ -67,7 +67,7 @@ function Faq(props){
   };
 
     return (
-        <div id="faq">
+        <div>
             <h2  style={{margin:'10px', textShadow:'2px 8px 2px black',letterSpacing:'0.2em',textAlign: 'center', fontFamily: 'Harry', fontSize: '4em', color:'#FFF'}}>FAQ</h2>
             <div style={{marginTop: '60px',opacity: '0.9'}}>
               {FAQ.map((el,i) => (

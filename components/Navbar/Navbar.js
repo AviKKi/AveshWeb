@@ -43,26 +43,31 @@ const navLinks = {
       link: '/',
       label: 'Home',
       show: 'always',
+      move:'1'
     },
     {
       link: '/#Events',
       label: 'Events',
       show: 'always',
+      move:'2'
     },
     {
       link: '/AllTeam',
       label: 'Team',
       show: 'always',
+      move:'3'
     },
     {
-      link: '/#faq',
+      link: '/#Faq',
       label: 'FAQ',
       show: 'always',
+      move:'4'
     },
     {
-      link: '/#footer',
+      link: '/#Footer',
       label: 'Contact Us',
       show: 'always',
+      move:'5'
     }
   ],
   unauth: [

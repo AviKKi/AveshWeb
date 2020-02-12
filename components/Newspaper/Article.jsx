@@ -21,7 +21,7 @@ const Article = ({ videoSrc, title, content, media, ...other }) => (
         />
         }
         <Cursive>
-            {content}<strong style={{fontSize:'1rem', fontFamily:'Helvetica',color: ''}}>more...</strong>
+            {content}<strong style={{fontSize:'1rem', fontFamily:'Helvetica',color: ''}}> More...</strong>
         </Cursive>
         <style>{`
             .resizeMedia{

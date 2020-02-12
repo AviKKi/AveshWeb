@@ -78,8 +78,8 @@ function PaperSheet(props) {
          <b> Contact us on </b>
          </Typography>
                    <Typography variant="body2" gutterBottom align="center" style={{color:"#f1f8e9",fontSize:14}}>
-                      Rishabh Singh : 8517817641 <br />
-                      Devesh Joshi : 7974451799 <br />
+                      Rishabh Singh : 8319272438 <br />
+                      Devesh Joshi : 8821034351 <br />
                       Akarshit Shrivastav : 9131054396  <br/>
                       Satyam Lachhwani : 9770977224<br /><br/> 
                       Website Admin : 7247489270
