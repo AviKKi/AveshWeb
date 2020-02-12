@@ -79,7 +79,7 @@ class App extends React.Component {
         <ReactFullpage
           //fullpage options
           scrollingSpeed = {500}
-          navigation={false}
+          // navigation={true}
           autoScrolling={true}
           controlArrows= {false}
           slidesNavigation={true}
@@ -89,22 +89,22 @@ class App extends React.Component {
             return (
               <ReactFullpage.Wrapper>
                 <Navbar st='absolute'/>
-                <div className="section" style={styles1}>
+                <div className="section" style={styles1} data-anchor="">
                   <MainImg />
                 </div>
-                <div className="section" style={styles2}>
+                <div className="section" style={styles2} data-anchor="Calender">
                   <Calender />
                 </div>
-                <div className="section" style={styles3} id="Events">
+                <div className="section" style={styles3} data-anchor="Events">
                   <Events/>
                 </div>
-                <div className="section" style={styles6}>
+                <div className="section" style={styles6} data-anchor="Video">
                   <Video />
                 </div>
-                <div className="section" style={styles4} id="Faq">
+                <div className="section" style={styles4} data-anchor="Faq">
                   <Faq/>
                 </div>
-                <div className="section" style={styles5} id="Footer">
+                <div className="section" style={styles5} data-anchor="Footer">
                   {/* <About /> */}
                   <h2 style={{ textShadow:'2px 8px 2px black',letterSpacing:'0.1em',textAlign: 'center', fontFamily: 'Harry', fontSize: '4em', color:'#FFF', position:'absolute', width:'100%',top:'20px'}}>Contact Us</h2>
                   <Footer />

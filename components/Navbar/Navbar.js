@@ -14,7 +14,7 @@ import { logoutUser } from '../../actions/auth'
 
 const CustomListItem = withStyles(navbarsStyle)((props) => {
   const { classes, clickHandler } = props
-  const { link, label } = props.payload
+  const { link, label, move } = props.payload
   // console.log({clickHandler})
   return (<ListItem className={classes.listItem} >
     <Link href={link}>
@@ -24,9 +24,16 @@ const CustomListItem = withStyles(navbarsStyle)((props) => {
         onClick={
           () => {
             try {
+              if(clickHandler)
               clickHandler();
-              setTimeout(() => Router.push(link), 50);
-            } catch (e) { }
+              setTimeout(() => { 
+                Router.push(link); 
+                if (move) window.fullpage_api.moveTo(move) 
+                console.log(window.fullpage_api)
+              }, 50);
+            } catch (e) {
+              console.log(e)
+             }
           }}
         color="transparent"
         className="{classes.navLink}"
@@ -43,31 +50,31 @@ const navLinks = {
       link: '/',
       label: 'Home',
       show: 'always',
-      move:'1'
+      move: 1
     },
     {
       link: '/#Events',
       label: 'Events',
       show: 'always',
-      move:'2'
+      move: 3
     },
     {
       link: '/AllTeam',
       label: 'Team',
       show: 'always',
-      move:'3'
+      // move: 3
     },
     {
       link: '/#Faq',
       label: 'FAQ',
       show: 'always',
-      move:'4'
+      move: 4
     },
     {
       link: '/#Footer',
       label: 'Contact Us',
       show: 'always',
-      move:'5'
+      move: 5
     }
   ],
   unauth: [
