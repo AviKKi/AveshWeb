@@ -287,7 +287,7 @@ export const Managment = [
 			  {
 				title: "Model & Paper Presentation",
 				pdfLink: "https://drive.google.com/open?id=1TS_uXC9i7dIvGDJtZ1CVfKwCugMOJEll",
-				description: "Navrachna is a innovation model and paper presentation competition in which you will showcase your creativity by using the natural elements to its maximum limits. Ex.- By using natural elements like sunlight, water, soil,wind, sand, leaves etc.",
+				description: "What solutions and ideas comes in your mind when you think about the obstacles in the advancements of India ? how can you solve them ? Present here, your selected problem and it’s solution. The problem could be anything, from making India a 5 Trillion economy to abolishment of single use plastic and also the solution can come from anywhere including your 7/8 th semesters’ project.",
 				coordinators: ["Palash Dubey : 8959879681","Pratiksha Jagat : 9755304067"],
 				logo: "../static/logo/Navrachna-og.png",
 				background: "../static/img/pre.jpg",

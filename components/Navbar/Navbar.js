@@ -20,7 +20,7 @@ const CustomListItem = withStyles(navbarsStyle)((props) => {
     <Link href={link}>
       <Button
         className={classes.navLink}
-        style={{ padding: '12px 20px' }}
+        style={{ padding: '12px 20px' , width:"100%", textAlign:"left"}}
         onClick={
           () => {
             try {
@@ -68,13 +68,13 @@ const navLinks = {
       link: '/#Faq',
       label: 'FAQ',
       show: 'always',
-      move: 4
+      move: 5
     },
     {
       link: '/#Footer',
       label: 'Contact Us',
       show: 'always',
-      move: 5
+      move: 6
     }
   ],
   unauth: [
