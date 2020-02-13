@@ -84,12 +84,12 @@ const styles = theme => ({
       {
         name : "Palash Dubey",
         profile : "",
-        pic : "../static/team/palash.jpg"
+        pic : "../static/team/palash.jfif"
       },
       {
         name : "Alka Tiwari",
         profile : "",
-        pic : "../static/team/alka.jpg",
+        pic : "../static/team/alka.png",
         profile: "https://github.com/alkatiwari23"
       },
       {
@@ -112,7 +112,7 @@ const styles = theme => ({
       {
         name : "Diksha Verma",
         profile : "",
-        pic : "../static/team/diksha.png",
+        pic : "../static/team/diksha.jfif",
         profile: "https://github.com/dikshaverma011"
       },
       {
@@ -124,7 +124,7 @@ const styles = theme => ({
       {
         name : "Arun Kumar Behra",
         profile : "",
-        pic : "../static/team/arun.jpg",
+        pic : "../static/team/arun.png",
         profile: "https://github.com/akb1985"
       }
       ]
@@ -146,7 +146,7 @@ const styles = theme => ({
       {
         name : "Nishita Toshi",
         profile : "",
-        pic : "../static/team/nishita.jpg"
+        pic : "../static/team/nishita.jpeg"
       },
       ]
     },
