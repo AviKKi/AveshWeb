@@ -71,12 +71,6 @@ const styles = theme => ({
         pic : "../static/team/anmol.jpeg"
       },
       {
-        name : "Satyam Lachhwani",
-        profile : "",
-        pic : "../static/team/satyam.png",
-        profile: "https://github.com/Satyam1203"
-      },
-      {
         name : "Naama Ali",
         profile : "",
         pic : "../static/team/naama.jpg"
@@ -126,7 +120,13 @@ const styles = theme => ({
         profile : "",
         pic : "../static/team/arun.png",
         profile: "https://github.com/akb1985"
-      }
+      },
+      {
+        name : "Satyam Lachhwani",
+        profile : "",
+        pic : "../static/team/satyam.png",
+        profile: "https://github.com/Satyam1203"
+      },
       ]
     },
 
