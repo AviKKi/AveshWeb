@@ -9,7 +9,7 @@ const Newspaper = ({ ribbon,articles, onClick }) => (
             <img src={ribbon} className='resizeImg'/>
         </H1>
         <div style={styles.mainContent}>
-            {articles.map(artcl => <Article {...artcl} onClick={onClick.bind(this, artcl)} content={artcl.description} media={artcl.media} />)}
+            {articles.map(artcl => <Article {...artcl} onClick={onClick.bind(this, artcl)} content={artcl.theme} media={artcl.media} />)}
         </div>
         <style jsx>{`
             .resizeImg{

@@ -18,6 +18,7 @@ import Footer from '../components/Footer/Footer';
 import Team from '../components/Home/Team';
 import Link from 'next/link';
 import Head from 'next/head';
+import { deflateSync } from 'zlib';
 
 const styles = theme => ({
 
@@ -71,12 +72,6 @@ const styles = theme => ({
         pic : "../static/team/anmol.jpeg"
       },
       {
-        name : "Satyam Lachhwani",
-        profile : "",
-        pic : "../static/team/satyam.png",
-        profile: "https://github.com/Satyam1203"
-      },
-      {
         name : "Naama Ali",
         profile : "",
         pic : "../static/team/naama.jpg"
@@ -96,6 +91,11 @@ const styles = theme => ({
         name : "Muskaan Agrawal",
         profile : "",
         pic : "../static/team/muskaan.png"
+      },
+      {
+        name : "Happy Singh",
+        profile : "",
+        pic : "../static/team/happy.jpeg"
       },
       ]
   },
@@ -126,7 +126,13 @@ const styles = theme => ({
         profile : "",
         pic : "../static/team/arun.png",
         profile: "https://github.com/akb1985"
-      }
+      },
+      {
+        name : "Satyam Lachhwani",
+        profile : "",
+        pic : "../static/team/satyam.png",
+        profile: "https://github.com/Satyam1203"
+      },
       ]
     },
 

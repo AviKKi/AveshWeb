@@ -20,9 +20,11 @@ const Article = ({ videoSrc, title, content, media, ...other }) => (
             className='resizeMedia'
         />
         }
-        <Cursive>
-            {content}<strong style={{fontSize:'1rem', fontFamily:'Helvetica',color: ''}}> More...</strong>
-        </Cursive>
+        <div  style={{minHeight:'120px'}}>
+            <Cursive>
+                {content}<strong style={{fontSize:'1rem', fontFamily:'Helvetica',color: ''}}> More...</strong>
+            </Cursive>
+        </div>
         <style>{`
             .resizeMedia{
                 float:left;
