@@ -42,7 +42,7 @@ class LoginPage extends React.Component {
   }
   inputChangeHandler = (key,e)=>{
       this.setState({
-          [key]: e.target.value
+          [key]: e.target.value 
       })
   }
   errorHandler = (msg)=>{

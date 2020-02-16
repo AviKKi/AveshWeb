@@ -3,10 +3,12 @@ import Search from "@material-ui/icons/Search";
 import VideogameAsset from "@material-ui/icons/VideogameAsset";
 import ComputerIcon from '@material-ui/icons/Computer';
 import AirplanemodeActiveIcon from '@material-ui/icons/AirplanemodeActive';
-import LocationCityIcon from '@material-ui/icons/LocationCity';import BuildIcon from '@material-ui/icons/Build';
+import LocationCityIcon from '@material-ui/icons/LocationCity';
+import BuildIcon from '@material-ui/icons/Build';
 import WbIncandescentIcon from '@material-ui/icons/WbIncandescent';
 import SlideshowIcon from '@material-ui/icons/Slideshow';
 import BusinessCenterIcon from '@material-ui/icons/BusinessCenter';
+import PrintIcon from '@material-ui/icons/Print';
 
 export const Technical =
 		[{
@@ -118,6 +120,22 @@ export const Technical =
 					logo: "../static/logo/Pranoda-og.png",
 					background: "../static/img/pranoda.jpg",
 					media: "../static/img/media/pranoda.jpg"
+				},]
+			},
+			{
+			tabButton: "3D printing",
+			tabIcon: PrintIcon,
+			ribbon: '../static/img/ribbon/ribbon_3d.png',
+			mainEvents:[
+				{
+					title: "3D printing",
+					theme: "Test your 3D visualisation & modelling skills and Design your model with all the imagination you have.",
+					pdfLink: "https://drive.google.com/open?id=16aPUjuXJsW4fQkgT6W28B4sePN5EtoYL",
+					description: "Test your 3D visualisation & modelling skills & design your model with all the imagination you have. Be fast & be precise because it’s similar a race where you have to get maximum checkpoints as well as have to finish in minimum time. ",
+					coordinators: ["Anmol Singh Matharu : 9981512422", "Happy Singh : 9131304373"],
+					logo: "../static/logo/3d.png",
+					background: "../static/img/3d.png",
+					media: "../static/img/media/3d.png"
 				},]
 			},
 			// {
