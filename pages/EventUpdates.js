@@ -10,20 +10,14 @@ class EventUpdates extends React.Component{
         update: []
     }
     fetchData = ()=>{
-        fetch('http://www.mocky.io/v2/5e4adeb62f000022b997d5c4')
+        fetch('https://api.aveshgecr.in/avesh/eventupdate')
         .then((response)=>{
-            console.log(response);
             return response.json();
         })
         .then((r)=>{
-        console.log(r);
             if(!this.isCancelled){
-            const results = r.articles.map(row=>({
-                title: row.title,
-                msg: row.msg,
-                time: row.time
-            }))
-            this.setState({update:results,isFetching:false})
+                const results = r;
+                this.setState({update:results,isFetching:false})
             }
         })
         .catch(error => {
@@ -41,7 +35,11 @@ class EventUpdates extends React.Component{
                     <p>{this.state.isFetching ? 'Fetching users...' : ''}</p>
                     <h1 style={{textAlign:'center'}}>Avesh Updates</h1>
                     <div>
-                        {this.state.update.map(x => (<UpdateBox title={x.title} msg={x.msg} time={x.time} />))}
+                        {
+                          this.state.update.map(
+                              x => <UpdateBox {...x} />
+                            )
+                        }
                     </div>
                 </div>
             <Footer st='static'/>
